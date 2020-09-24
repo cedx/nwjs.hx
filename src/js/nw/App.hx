@@ -25,7 +25,12 @@ extern class App {
 	static final startPath: String;
 
 	/** Adds an entry to the whitelist used for controlling cross-origin access. **/
-	static function addOriginAccessWhitelistEntry(sourceOrigin: String, destinationProtocol: String, destinationHost: String, allowDestinationSubdomains: Bool): Void;
+	static function addOriginAccessWhitelistEntry(
+		sourceOrigin: String,
+		destinationProtocol: String,
+		destinationHost: String,
+		allowDestinationSubdomains: Bool
+	): Void;
 
 	/** Marks the application cache group specified by `manifestUrl` obsolete. **/
 	static function clearAppCache(manifestUrl: String): Void;
@@ -56,7 +61,12 @@ extern class App {
 	static function registerGlobalHotKey(shortcut: Shortcut): Void;
 
 	/** Removes an entry from the whitelist used for controlling cross-origin access. **/
-	static function removeOriginAccessWhitelistEntry(sourceOrigin: String, destinationProtocol: String, destinationHost: String, allowDestinationSubdomains: Bool): Void;
+	static function removeOriginAccessWhitelistEntry(
+		sourceOrigin: String,
+		destinationProtocol: String,
+		destinationHost: String,
+		allowDestinationSubdomains: Bool
+	): Void;
 
 	/** Sets the proxy configuration which the Web engine will use to request network resources. **/
 	static function setProxyConfig(config: String, pacUrl: String): Void;
