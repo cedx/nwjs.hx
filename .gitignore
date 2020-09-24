@@ -4,17 +4,11 @@
 
 /build/
 /doc/api/
-/node_modules/
-/lib/res/
+/lib/
 /var/
-/vendor/
 /www/
 
 /*.code-workspace
 /*.iml
 /**/.DS_Store
-/composer.lock
-/npm-debug.log
-/package-lock.json
 /run.n
-/lib/js/which.*

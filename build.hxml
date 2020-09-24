@@ -1,0 +1,14 @@
+--class-path src
+--define analyzer-optimize
+--define js-es=6
+--js lib/nw.js
+
+js.nw.App
+js.nw.Clipboard
+js.nw.Menu
+js.nw.MenuItem
+js.nw.Screen
+js.nw.Shell
+js.nw.Shortcut
+js.nw.Tray
+js.nw.Window

@@ -13,4 +13,4 @@ Types definitions for using [NW.js](https://nwjs.io) with [Haxe](https://haxe.or
 - [Submit an issue](https://git.belin.io/cedx/nwjs.hx/issues)
 
 ## License
-[LCOV Reports](https://docs.belin.io/nwjs.hx) is distributed under the MIT License.
+[Haxe externs for NW.js](https://docs.belin.io/nwjs.hx) is distributed under the MIT License.
