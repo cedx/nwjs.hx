@@ -2,7 +2,7 @@
 Set-StrictMode -Version Latest
 Set-Location (Split-Path $PSScriptRoot)
 
-tools/clean.ps1
+tool/clean.ps1
 
 $files = "*.md", "extraParams.hxml", "haxelib.json", "src"
 Compress-Archive $files var/haxelib.zip -Force

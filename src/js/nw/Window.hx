@@ -54,6 +54,10 @@ extern class Window {
 	/** Returns all windows. **/
 	static function getAll(callback: Array<Window> -> Void): Void;
 
+	/** Open a new window and loads the specified URL in it. **/
+	@:overload(function(url: String, callback: Window -> Void): Void {})
+	static function open(url: String, ?options: WindowOpenOptions, ?callback: Window -> Void): Void;
+
 	/** Moves the focus away. **/
 	function blur(): Void;
 
@@ -104,10 +108,6 @@ extern class Window {
 	@:overload(function(event: WindowEvent, handler: (Int, Int) -> Void): Void {})
 	@:overload(function(event: WindowEvent, handler: Null<IFrameElement> -> Void): Void {})
 	function on(event: WindowEvent, handler: () -> Void): Void;
-
-	/** Open a new window and loads the specified URL in it. **/
-	@:overload(function(url: String, callback: Window -> Void): Void {})
-	function open(url: String, ?options: WindowOpenOptions, ?callback: Window -> Void): Void;
 
 	/** Reloads this window. **/
 	function reload(): Void;
