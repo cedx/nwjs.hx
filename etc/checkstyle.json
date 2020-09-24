@@ -8,6 +8,7 @@
 			"js/nw/Clipboard",
 			"js/nw/Menu",
 			"js/nw/MenuItem",
+			"js/nw/Screen",
 			"js/nw/Shortcut",
 			"js/nw/Tray",
 			"js/nw/Window"
