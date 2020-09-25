@@ -9,8 +9,8 @@ import js.html.Window as DomWindow;
 @:native("nw.Window")
 extern class Window {
 
-	/** TODO This includes multiple functions to manipulate the cookies. **/
-	final cookies: Dynamic; // TODO Cookies => get, getAll, remove and set
+	/** The cookies manager. **/
+	final cookies: Cookies;
 
 	/** The window's height. **/
 	var height: Int;

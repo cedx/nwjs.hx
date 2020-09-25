@@ -1,7 +1,6 @@
 {
 	"classPath": "src/",
 	"contributors": ["cedx"],
-	"dependencies": {"hxnodejs": "12.1.0"},
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",

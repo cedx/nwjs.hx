@@ -5,6 +5,7 @@
 
 js.nw.App
 js.nw.Clipboard
+js.nw.Cookies
 js.nw.Menu
 js.nw.MenuItem
 js.nw.Screen
