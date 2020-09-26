@@ -1,8 +1,11 @@
 package js.nw;
 
+import haxe.Constraints.Function;
+import js.node.events.EventEmitter;
+
 /** Represents an item in a menu. **/
 @:native("nw.MenuItem")
-extern class MenuItem {
+extern class MenuItem extends EventEmitter<MenuItem> {
 
 	/** Value indicating whether the checkbox is checked. **/
 	var checked: Bool;
@@ -39,16 +42,13 @@ extern class MenuItem {
 
 	/** The callback invoked when the user activates this item. **/
 	dynamic function click(): Void;
-
-	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
-	function on(event: MenuItemEvent, handler: () -> Void): Void;
 }
 
 /** Defines the events of a `MenuItem` instance. **/
-enum abstract MenuItemEvent(String) from String to String {
+enum abstract MenuItemEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `click` event. **/
-	var Click = "click";
+	var Click: MenuItemEvent<Void -> Void> = "click";
 }
 
 /** Defines the options of a `MenuItem` instance. **/

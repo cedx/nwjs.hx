@@ -1,13 +1,15 @@
 package js.nw;
 
+import haxe.Constraints.Function;
 import haxe.DynamicAccess;
 import haxe.extern.EitherType;
 import js.html.IFrameElement;
 import js.html.Window as DomWindow;
+import js.node.events.EventEmitter;
 
 /** A wrapper of the DOM's topmost `window` object. **/
 @:native("nw.Window")
-extern class Window {
+extern class Window extends EventEmitter<Window> {
 
 	/** The cookies manager. **/
 	final cookies: Cookies;
@@ -55,8 +57,8 @@ extern class Window {
 	static function getAll(callback: Array<Window> -> Void): Void;
 
 	/** Open a new window and loads the specified URL in it. **/
-	@:overload(function(url: String, callback: Window -> Void): Void {})
-	static function open(url: String, ?options: WindowOpenOptions, ?callback: Window -> Void): Void;
+	@:overload(function(url: String, options: WindowOpenOptions, ?callback: Window -> Void): Void {})
+	static function open(url: String, ?callback: Window -> Void): Void;
 
 	/** Moves the focus away. **/
 	function blur(): Void;
@@ -103,12 +105,6 @@ extern class Window {
 	/** Moves this window's left and top edge to the specified coordinates. **/
 	function moveTo(x: Int, y: Int): Void;
 
-	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
-	@:overload(function(event: WindowEvent, handler: (Null<IFrameElement>, String, WindowPolicy) -> Void): Void {})
-	@:overload(function(event: WindowEvent, handler: (Int, Int) -> Void): Void {})
-	@:overload(function(event: WindowEvent, handler: Null<IFrameElement> -> Void): Void {})
-	function on(event: WindowEvent, handler: () -> Void): Void;
-
 	/** Reloads this window. **/
 	function reload(): Void;
 
@@ -151,61 +147,61 @@ extern class Window {
 }
 
 /** Defines the events of a `Window` instance. **/
-enum abstract WindowEvent(String) from String to String {
+enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `blur` event. **/
-	var Blur = "blur";
+	var Blur: WindowEvent<Void -> Void> = "blur";
 
 	/** The `close` event. **/
-	var Close = "close";
+	var Close: WindowEvent<Void -> Void> = "close";
 
 	/** The `closed` event. **/
-	var Closed = "closed";
+	var Closed: WindowEvent<Void -> Void> = "closed";
 
 	/** The `devtools-closed` event. **/
-	var DevToolsClosed = "devtools-closed";
+	var DevToolsClosed: WindowEvent<Void -> Void> = "devtools-closed";
 
 	/** The `document-end` event. **/
-	var DocumentEnd = "document-end";
+	var DocumentEnd: WindowEvent<Null<IFrameElement> -> Void> = "document-end";
 
 	/** The `document-start` event. **/
-	var DocumentStart = "document-start";
+	var DocumentStart: WindowEvent<Null<IFrameElement> -> Void> = "document-start";
 
 	/** The `enter-fullscreen` event. **/
-	var EnterFullscreen = "enter-fullscreen";
+	var EnterFullscreen: WindowEvent<Void -> Void> = "enter-fullscreen";
 
 	/** The `focus` event. **/
-	var Focus = "focus";
+	var Focus: WindowEvent<Void -> Void> = "focus";
 
 	/** The `loaded` event. **/
-	var Loaded = "loaded";
+	var Loaded: WindowEvent<Void -> Void> = "loaded";
 
 	/** The `loading` event. **/
-	var Loading = "loading";
+	var Loading: WindowEvent<Void -> Void> = "loading";
 
 	/** The `maximize` event. **/
-	var Maximize = "maximize";
+	var Maximize: WindowEvent<Void -> Void> = "maximize";
 
 	/** The `minimize` event. **/
-	var Minimize = "minimize";
+	var Minimize: WindowEvent<Void -> Void> = "minimize";
 
 	/** The `move` event. **/
-	var Move = "move";
+	var Move: WindowEvent<(Int, Int) -> Void> = "move";
 
 	/** The `navigation` event. **/
-	var Navigation = "navigation";
+	var Navigation: WindowEvent<(Null<IFrameElement>, String, WindowPolicy) -> Void> = "navigation";
 
 	/** The `new-win-policy` event. **/
-	var NewWinPolicy = "new-win-policy";
+	var NewWinPolicy: WindowEvent<(Null<IFrameElement>, String, WindowPolicy) -> Void> = "new-win-policy";
 
 	/** The `resize` event. **/
-	var Resize = "resize";
+	var Resize: WindowEvent<(Int, Int) -> Void> = "resize";
 
 	/** The `restore` event. **/
-	var Restore = "restore";
+	var Restore: WindowEvent<Void -> Void> = "restore";
 
 	/** The `zoom` event. **/
-	var Zoom = "zoom";
+	var Zoom: WindowEvent<Int -> Void> = "zoom"; // TODO ? Float -> Void
 }
 
 /** Defines the manifest of a `Window` instance. **/

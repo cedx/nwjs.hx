@@ -1,8 +1,11 @@
 package js.nw;
 
+import haxe.Constraints.Function;
+import js.node.events.EventEmitter;
+
 /** Represents a global keyboard shortcut, also known as system-wide hotkey. **/
 @:native("nw.Shortcut")
-extern class Shortcut {
+extern class Shortcut extends EventEmitter<Shortcut> {
 
 	/** The key combinations of the shortcut. **/
 	final key: String;
@@ -14,20 +17,17 @@ extern class Shortcut {
 	dynamic function active(): Void;
 
 	/** The callback invoked when failed to register the hotkey. **/
-	dynamic function failed(): Void;
-
-	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
-	function on(event: ShortcutEvent, handler: () -> Void): Void;
+	dynamic function failed(message: String): Void;
 }
 
 /** Defines the events of a `Shortcut` instance. **/
-enum abstract ShortcutEvent(String) from String to String {
+enum abstract ShortcutEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `active` event. **/
-	var Active = "active";
+	var Active: ShortcutEvent<Void -> Void> = "active";
 
 	/** The `failed` event. **/
-	var Failed = "failed";
+	var Failed: ShortcutEvent<String -> Void> = "failed";
 }
 
 /** Defines the options of a `Shortcut` instance. **/

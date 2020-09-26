@@ -1,8 +1,9 @@
 # Changelog
 
 ## Version [0.2.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.1.0...v0.2.0)
+- Added an example code.
 - Fixed the signature of the `Window.open()` method.
-- Removed the dependency on [`hxnodejs`](https://lib.haxe.org/p/hxnodejs) package.
+- Using typed event listeners.
 
 ## Version 0.1.0
 - Initial release.
