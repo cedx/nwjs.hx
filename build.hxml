@@ -2,6 +2,7 @@
 --define analyzer-optimize
 --define js-es=6
 --js lib/nw.js
+--library hxnodejs:12.1.0
 
 js.nw.App
 js.nw.Clipboard
