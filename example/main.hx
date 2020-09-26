@@ -22,7 +22,7 @@ class Main {
 	public function createContextMenu() {
 		final contextMenu = new Menu();
 		contextMenu.append(new MenuItem({label: "Item A"}));
-		contextMenu.append(new MenuItem({type: Separator}));
+		contextMenu.append(MenuItem.newSeparator());
 		contextMenu.append(new MenuItem({
 			type: Checkbox,
 			label: "Item B",

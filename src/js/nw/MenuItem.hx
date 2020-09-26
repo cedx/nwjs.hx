@@ -40,6 +40,10 @@ extern class MenuItem extends EventEmitter<MenuItem> {
 	/** Creates a new menu item. **/
 	function new(options: MenuItemOptions);
 
+	/** Creates a new menu separator. **/
+	inline static function newSeparator(): MenuItem
+		return new MenuItem({type: Separator});
+
 	/** The callback invoked when the user activates this item. **/
 	dynamic function click(): Void;
 }

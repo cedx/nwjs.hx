@@ -10,6 +10,10 @@ extern class Menu {
 	/** Creates a new menu. **/
 	function new(?options: {type: MenuType});
 
+	/** Creates a new menubar. **/
+	inline static function newMenubar(): Menu
+		return new Menu({type: MenuBar});
+
 	/** Append an `item` to the tail of this menu. **/
 	function append(item: MenuItem): Void;
 
