@@ -86,7 +86,7 @@ typedef MenuItemOptions = {
 }
 
 /** Defines the type of a menu item. **/
-enum abstract MenuItemType(String) from String to String {
+enum abstract MenuItemType(String) {
 
 	/** The menu item has a checkbox. **/
 	var Checkbox = "checkbox";

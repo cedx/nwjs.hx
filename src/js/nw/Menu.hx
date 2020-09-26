@@ -30,7 +30,7 @@ extern class Menu {
 }
 
 /** Defines the type of a menu. **/
-enum abstract MenuType(String) from String to String {
+enum abstract MenuType(String) {
 
 	/** It's a context menu. **/
 	var ContextMenu = "contextmenu";

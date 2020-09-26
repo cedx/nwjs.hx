@@ -76,7 +76,7 @@ extern class App {
 }
 
 /** Defines the events of an `App` instance. **/
-enum abstract AppEvent(String) from String to String {
+enum abstract AppEvent(String) {
 
 	/** The `open` event. **/
 	var Open = "open";

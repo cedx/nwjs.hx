@@ -38,7 +38,7 @@ typedef ClipboardData = {
 }
 
 /** Defines the type of clipboard data. **/
-enum abstract ClipboardDataType(String) from String to String {
+enum abstract ClipboardDataType(String) {
 
 	/** The clipboard data is an HTML string. **/
 	var Html = "html";

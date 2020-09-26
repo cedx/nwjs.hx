@@ -304,7 +304,7 @@ typedef WindowPolicy = {
 }
 
 /** Defines the position of a `Window` instance. **/
-enum abstract WindowPosition(String) from String to String {
+enum abstract WindowPosition(String) {
 
 	/** The window is... TODO **/
 	var Center = "center";

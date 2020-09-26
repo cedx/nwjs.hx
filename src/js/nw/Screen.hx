@@ -7,7 +7,7 @@ extern class DesktopCaptureMonitor {
 }
 
 /** TODO **/
-enum abstract DesktopMediaSource(String) from String to String {
+enum abstract DesktopMediaSource(String) {
 
 	/** TODO **/
 	var Screen = "screen";
@@ -42,13 +42,13 @@ typedef ScreenDefinition = {
 	/** Value indicating whether the screen is built-in. **/
 	var isBuiltIn: Bool;
 
-	/** TODO **/
+	/** The angle of rotation applied to the screen. **/
 	var rotation: Int;
 
 	/** The scale factor. **/
 	var scaleFactor: Float;
 
-	/** TODO **/
+	/** The number of touch points supported by the screen. **/
 	var touchSupport: Int;
 
 	/** The usable area within the screen bounds. **/
@@ -56,7 +56,7 @@ typedef ScreenDefinition = {
 }
 
 /** Defines the events of a `Screen` instance. **/
-enum abstract ScreenEvent(String) from String to String {
+enum abstract ScreenEvent(String) {
 
 	/** The `displayAdded` event. **/
 	var DisplayAdded = "displayAdded";
