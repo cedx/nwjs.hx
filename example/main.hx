@@ -44,7 +44,7 @@ class Main {
 		submenu.append(new MenuItem({label: "Item A"}));
 		submenu.append(new MenuItem({label: "Item B"}));
 
-		final menubar = new Menu({type: MenuBar});
+		final menubar = Menu.newMenubar();
 		if (process.platform == "darwin") menubar.createMacBuiltin("My App");
 		menubar.append(new MenuItem({
 			label: "First Menu",
