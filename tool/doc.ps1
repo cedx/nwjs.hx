@@ -14,7 +14,7 @@ haxelib run dox `
 	--input-path var `
 	--output-path doc/api `
 	--title "Haxe externs for NW.js" `
-	--toplevel-package js.nw
+	--toplevel-package js
 
 Copy-Item doc/img/favicon.ico doc/api
 mkdocs build --config-file=etc/mkdocs.yaml
