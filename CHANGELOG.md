@@ -4,6 +4,7 @@
 - Added the `js.Nw` class.
 - Added the `js.NwFlavor` enumeration.
 - Added the `Menu.newMenubar()` static method.
+- Added the `MenuItem.newSeparator()` static method.
 - Added an example code.
 - Fixed the signature of the `Window.open()` method.
 - Using typed event listeners.

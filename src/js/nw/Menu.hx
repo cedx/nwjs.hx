@@ -11,7 +11,7 @@ extern class Menu {
 	function new(?options: {type: MenuType});
 
 	/** Creates a new menubar. **/
-	inline static function newMenubar(): Menu
+	static inline function newMenubar(): Menu
 		return new Menu({type: MenuBar});
 
 	/** Append an `item` to the tail of this menu. **/
