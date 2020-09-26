@@ -1,6 +1,8 @@
 package js.nw;
 
+import haxe.Constraints.Function;
 import haxe.DynamicAccess;
+import js.node.events.EventEmitter.Event;
 
 /** Represents the application. **/
 @:native("nw.App")
@@ -50,9 +52,8 @@ extern class App {
 	/** Queries the proxy to be used for loading `url` in DOM. **/
 	static function getProxyForURL(url: String): Void;
 
-	/** Sets up an `handler` that will be invoked when the specified `event` is delivered to the application. **/
-	@:overload(function(event: AppEvent, handler: String -> Void): Void {})
-	static function on(event: AppEvent, handler: () -> Void): Void;
+	/** Sets up a `handler` that will be invoked when the specified `event` is delivered to the application. **/
+	static function on<T: Function>(event: Event<T>, handler: T): App;
 
 	/** Terminates the application. **/
 	static function quit(): Void;
@@ -76,11 +77,11 @@ extern class App {
 }
 
 /** Defines the events of an `App` instance. **/
-enum abstract AppEvent(String) {
+enum abstract AppEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `open` event. **/
-	var Open = "open";
+	var Open: AppEvent<String -> Void> = "open";
 
 	/** The `reopen` event. **/
-	var Reopen = "reopen";
+	var Reopen: AppEvent<Void -> Void> = "reopen";
 }

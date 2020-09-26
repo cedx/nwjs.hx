@@ -1,16 +1,19 @@
 package js.nw;
 
+import haxe.Constraints.Function;
+import js.node.events.EventEmitter.Event;
+
 /** TODO **/
 @:native("nw.Screen.DesktopCaptureMonitor")
 extern class DesktopCaptureMonitor {
 	// TODO
 
-	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
+	/** Sets up a `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
 	// @:overload(function(event: DesktopCaptureMonitorEvent, handler: Null<IFrameElement> -> Void): Void {})
 	// function on(event: DesktopCaptureMonitorEvent, handler: ScreenDefinition -> Void): Void;
 }
 
-enum abstract DesktopCaptureMonitorEvent(String) {
+enum abstract DesktopCaptureMonitorEvent<T: Function>(Event<T>) to Event<T> {
 
 }
 
@@ -34,8 +37,8 @@ extern class Screen {
 	/** Initializes the `Screen` singleton object. **/
 	static function Init(): Void;
 
-	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
-	static function on(event: ScreenEvent, handler: ScreenDefinition -> Void): Void;
+	/** Sets up a `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
+	static function on<T: Function>(event: Event<T>, handler: T): App;
 }
 
 /** Defines the structure of a screen. **/
@@ -64,14 +67,14 @@ typedef ScreenDefinition = {
 }
 
 /** Defines the events of a `Screen` instance. **/
-enum abstract ScreenEvent(String) {
+enum abstract ScreenEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `displayAdded` event. **/
-	var DisplayAdded = "displayAdded";
+	var DisplayAdded: ScreenEvent<ScreenDefinition -> Void> = "displayAdded";
 
 	/** The `displayBoundsChanged` event. **/
-	var DisplayBoundsChanged = "displayBoundsChanged";
+	var DisplayBoundsChanged: ScreenEvent<ScreenDefinition -> Void> = "displayBoundsChanged";
 
 	/** The `displayRemoved` event. **/
-	var DisplayRemoved = "displayRemoved";
+	var DisplayRemoved: ScreenEvent<ScreenDefinition -> Void> = "displayRemoved";
 }
