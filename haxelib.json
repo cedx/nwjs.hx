@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Initial release.",
+	"releasenote": "Using typed event listeners.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
 	"version": "0.2.0"

@@ -4,6 +4,14 @@ package js.nw;
 @:native("nw.Screen.DesktopCaptureMonitor")
 extern class DesktopCaptureMonitor {
 	// TODO
+
+	/** Sets up an `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
+	// @:overload(function(event: DesktopCaptureMonitorEvent, handler: Null<IFrameElement> -> Void): Void {})
+	// function on(event: DesktopCaptureMonitorEvent, handler: ScreenDefinition -> Void): Void;
+}
+
+enum abstract DesktopCaptureMonitorEvent(String) {
+
 }
 
 /** TODO **/

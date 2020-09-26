@@ -306,13 +306,13 @@ typedef WindowPolicy = {
 /** Defines the position of a `Window` instance. **/
 enum abstract WindowPosition(String) {
 
-	/** The window is... TODO **/
+	/** The window is positioned in the center of the screen. **/
 	var Center = "center";
 
-	/** The window is... TODO **/
+	/** The window is positioned under the mouse cursor. **/
 	var Mouse = "mouse";
 
-	/** The window is... TODO **/
+	/** The window is automatically positioned by the desktop environment. **/
 	var Null = "null";
 }
 
