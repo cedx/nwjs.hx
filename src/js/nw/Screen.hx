@@ -8,7 +8,7 @@ import js.node.events.EventEmitter.Event;
 extern class DesktopCaptureMonitor {
 	// TODO
 
-	/** Sets up a `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
+	/** Adds a `listener` that will be invoked whenever the specified `event` is delivered to this object. **/
 	// @:overload(function(event: DesktopCaptureMonitorEvent, handler: Null<IFrameElement> -> Void): Void {})
 	// function on(event: DesktopCaptureMonitorEvent, handler: ScreenDefinition -> Void): Void;
 }
@@ -37,8 +37,20 @@ extern class Screen {
 	/** Initializes the `Screen` singleton object. **/
 	static function Init(): Void;
 
-	/** Sets up a `handler` that will be invoked whenever the specified `event` is delivered to this object. **/
-	static function on<T: Function>(event: Event<T>, handler: T): App;
+	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
+	static function addListener<T: Function>(event: Event<T>, listener: T): App;
+
+	/** Removes the specified `listener` for the given `event`. **/
+	static function off<T: Function>(event: Event<T>, listener: T): App;
+
+	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
+	static function on<T: Function>(event: Event<T>, listener: T): App;
+
+	/** Adds a one-time `listener` that will be removed and then invoked whenever the next time `event` is triggered. **/
+	static function once<T: Function>(event: Event<T>, listener: T): App;
+
+	/** Removes the specified `listener` for the given `event`. **/
+	static function removeListener<T: Function>(event: Event<T>, listener: T): App;
 }
 
 /** Defines the structure of a screen. **/
