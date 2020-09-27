@@ -4,11 +4,13 @@
 		"path": "RELATIVE_TO_SOURCE",
 		"HiddenField": ["js/nw/Window"],
 		"MemberName": [
+			"js/Nw",
 			"js/nw/App",
 			"js/nw/Clipboard",
 			"js/nw/Cookies",
 			"js/nw/Menu",
 			"js/nw/MenuItem",
+			"js/nw/Printer",
 			"js/nw/Screen",
 			"js/nw/Shortcut",
 			"js/nw/Tray",
@@ -39,7 +41,7 @@
 		{"type": "TODOComment"},
 
 		{"type": "EmptyPackage"},
-		{"type": "Interface"},
+		{"type": "Interface", "props": {"allowProperties": true}},
 		{"type": "UnnecessaryConstructor"},
 
 		{"type": "UnusedImport"},
