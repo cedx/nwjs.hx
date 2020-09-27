@@ -1,7 +1,7 @@
 # Changelog
 
 ## Version [0.3.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.2.0...v0.3.0)
-- Added the `Printer` module.
+- Added the `js.nw.Printer` module.
 - Completed the `Window` class.
 
 ## Version [0.2.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.1.0...v0.2.0)

@@ -74,8 +74,8 @@ class Main {
 
 	/** Lists the version strings of NW.js. **/
 	public function getVersions() {
-		console.log(Nw.version); // The NW.js version.
 		console.log(Nw.flavor); // The NW.js flavor.
+		console.log(Nw.version); // The NW.js version.
 		console.log(process.versions["chromium"]); // The Chromium version.
 		console.log(process.versions["node"]); // The Node.js version.
 	}
