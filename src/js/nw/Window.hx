@@ -1,11 +1,64 @@
 package js.nw;
 
 import haxe.Constraints.Function;
-import haxe.DynamicAccess;
 import haxe.extern.EitherType;
 import js.html.IFrameElement;
 import js.html.Window as DomWindow;
+import js.lib.ArrayBuffer;
+import js.lib.Error;
+import js.lib.Promise;
+import js.node.Buffer;
 import js.node.events.EventEmitter;
+import js.nw.Printer;
+
+/** Defines the data type of a captured image. **/
+enum abstract CaptureDataType(String) {
+
+	/** The image data is a `Buffer` instance. **/
+	var Buffer = "buffer";
+
+	/** The image data is a [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). **/
+	var DataUri = "datauri";
+
+	/** The image data is a [Base64](https://en.wikipedia.org/wiki/Base64) string. **/
+	var Raw = "raw";
+}
+
+/** Defines the format of a captured image. **/
+enum abstract CaptureImageFormat(String) {
+
+	/** The image format is JPEG. **/
+	var Jpeg = "jpeg";
+
+	/** The image format is PNG. **/
+	var Png = "png";
+}
+
+/** Defines the options of the `Window.capturePage()` method. **/
+typedef CapturePageOptions = {
+
+	/** The data type of the captured image. **/
+	var ?datatype: CaptureDataType;
+
+	/** The image format. **/
+	var ?format: CaptureImageFormat;
+}
+
+/** Defines the options of the `Window.captureScreenshot()` method. **/
+typedef CaptureScreenshotOptions = {
+
+	/** Captures the screenshot of a given region only. **/
+	var ?clip: {x: Float, y: Float, width: Float, height: Float, scale: Float};
+
+	/** The image format. **/
+	var ?format: CaptureImageFormat;
+
+	/** Value indicating whether to capture the whole page beyond the visible area. **/
+	var ?fullSize: Bool;
+
+	/** The compression quality. **/
+	var ?quality: Int;
+}
 
 /** A wrapper of the DOM's topmost `window` object. **/
 @:native("nw.Window")
@@ -50,7 +103,7 @@ extern class Window extends EventEmitter<Window> {
 	/** The page zoom. **/
 	var zoomLevel: Float;
 
-	/** Returns the window object **/
+	/** Returns the window object. **/
 	static function get(?windowObject: DomWindow): Window;
 
 	/** Returns all windows. **/
@@ -62,6 +115,16 @@ extern class Window extends EventEmitter<Window> {
 
 	/** Moves the focus away. **/
 	function blur(): Void;
+
+	/** Gets a value indicating whether the platform supports the `setVisibleOnAllWorkspaces()` method. **/
+	function canSetVisibleOnAllWorkspaces(): Bool;
+
+	/** Captures the visible area of this window. **/
+	function capturePage(callback: EitherType<Buffer, String>, ?options: EitherType<CapturePageOptions, String>): Void;
+
+	/** Captures a portion of this window. **/
+	@:overload(function(options: CaptureScreenshotOptions, callback: (Null<Error>, String) -> Void): Void {})
+	function captureScreenshot(options: CaptureScreenshotOptions): Promise<String>;
 
 	/** Closes this window. **/
 	function close(?force: Bool): Void;
@@ -75,11 +138,20 @@ extern class Window extends EventEmitter<Window> {
 	/** Enters the kiosk mode. **/
 	function enterKioskMode(): Void;
 
+	/** Executes a piece of JavaScript. **/
+	function eval(frame: Null<IFrameElement>, script: String): Void;
+
+	/** Loads and executes a compiled binary. **/
+	function evalNWBin(frame: Null<IFrameElement>, path: EitherType<ArrayBuffer, EitherType<Buffer, String>>): Void;
+
+	/** Loads and executes a compiled binary for modules. **/
+	function evalNWBinModule(frame: Null<IFrameElement>, path: EitherType<ArrayBuffer, EitherType<Buffer, String>>, modulePath: String): Void;
+
 	/** Puts the focus on this window. **/
 	function focus(): Void;
 
-	/** TODO Enumerates the printers in the system. **/
-	function getPrinters(callback: Array<DynamicAccess<Dynamic>>): Void;
+	/** Enumerates the printers in the system. **/
+	function getPrinters(callback: Array<Printer>): Void;
 
 	/** Hides this window. **/
 	function hide(): Void;
@@ -105,6 +177,9 @@ extern class Window extends EventEmitter<Window> {
 	/** Moves this window's left and top edge to the specified coordinates. **/
 	function moveTo(x: Int, y: Int): Void;
 
+	/** Print the web contents in the window. **/
+	function print(options: PrintOptions): Void;
+
 	/** Reloads this window. **/
 	function reload(): Void;
 
@@ -113,6 +188,9 @@ extern class Window extends EventEmitter<Window> {
 
 	/** Reloads this window by ignoring caches. **/
 	function reloadIgnoringCache(): Void;
+
+	/** Request the user's attention by making the window flashes in the task bar. **/
+	function requestAttention(attention: EitherType<Bool, Int>): Void;
 
 	/** Resizes this window by the specified `width` and `height` **/
 	function resizeBy(width: Int, height: Int): Void;
@@ -123,21 +201,48 @@ extern class Window extends EventEmitter<Window> {
 	/** Restores this window to its previous state. **/
 	function restore(): Void;
 
+	/** Sets this window to be on top of all other windows in the window system. **/
+	function setAlwaysOnTop(isAlwaysOnTop: Bool): Void;
+
+	/** Sets the badge label on the window icon in taskbar or dock. **/
+	function setBadgeLabel(label: String): Void;
+
 	/** Sets the inner height of this window. **/
 	function setInnerHeight(height: Int): Void;
 
 	/** Sets the inner width of this window. **/
 	function setInnerWidth(width: Int): Void;
 
+	/** Sets the window's maximum size. **/
+	function setMaximumSize(width: Int, height: Int): Void;
+
+	/** Sets the window's minimum size. **/
+	function setMinimumSize(width: Int, height: Int): Void;
+
+	/** Moves this window to the specified `position`. **/
+	function setPosition(position: WindowPosition): Void;
+
+	/** Sets the progress bar on the window icon in taskbar or dock. **/
+	function setProgressBar(progress: Float): Void;
+
+	/** Sets whether this window is resizable. **/
+	function setResizable(isResizable: Bool): Void;
+
 	/** Enables or disables the window's native shadow. **/
 	function setShadow(hasShadow: Bool): Void;
+
+	/** Controls whether to show this window in taskbar or dock. **/
+	function setShowInTaskbar(isShown: Bool): Void;
+
+	/** Controls whether this window is visible on all workspaces simultaneously. **/
+	function setVisibleOnAllWorkspaces(isVisible: Bool): Void;
 
 	/** Shows this window. **/
 	function show(?isShown: Bool): Void;
 
 	/** Opens the development tools to inspect this window. **/
-	@:overload(function(callback: Window -> Void): Void {})
-	function showDevTools(?iframe: EitherType<IFrameElement, String>, ?callback: Window -> Void): Void;
+	@:overload(function(iframe: EitherType<IFrameElement, String>, ?callback: Window -> Void): Void {})
+	function showDevTools(?callback: Window -> Void): Void;
 
 	/** Toggles the fullscreen mode. **/
 	function toggleFullscreen(): Void;
@@ -201,7 +306,7 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 	var Restore: WindowEvent<Void -> Void> = "restore";
 
 	/** The `zoom` event. **/
-	var Zoom: WindowEvent<Int -> Void> = "zoom"; // TODO ? Float -> Void
+	var Zoom: WindowEvent<Float -> Void> = "zoom";
 }
 
 /** Defines the manifest of a `Window` instance. **/
@@ -312,11 +417,6 @@ enum abstract WindowPosition(String) {
 	/** The window is positioned under the mouse cursor. **/
 	var Mouse = "mouse";
 
-	/** The window is automatically positioned by the desktop environment. **/
+	/** The window is positioned by the desktop environment. **/
 	var Null = "null";
-}
-
-/** Defines the options of the `Window.print()` method. **/
-typedef WindowPrintOptions = {
-	// TODO
 }

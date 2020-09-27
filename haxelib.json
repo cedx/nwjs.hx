@@ -5,8 +5,8 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Added the `Nw` class, added the `Menu.newMenubar()` and `MenuItem.newSeparator()` static methods, using typed event listeners.",
+	"releasenote": "Added the `Printer` module, completed the `Window` class.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
-	"version": "0.2.0"
+	"version": "0.3.0"
 }
