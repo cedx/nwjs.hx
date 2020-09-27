@@ -4,6 +4,7 @@ import js.Node.process;
 import js.html.InputElement;
 import js.node.Fs;
 import js.node.Path;
+import js.Nw;
 import js.nw.App;
 import js.nw.Clipboard;
 import js.nw.Menu;
@@ -73,15 +74,16 @@ class Main {
 
 	/** Lists the version strings of NW.js. **/
 	public function getVersions() {
+		console.log(Nw.version); // The NW.js version.
+		console.log(Nw.flavor); // The NW.js flavor.
 		console.log(process.versions["chromium"]); // The Chromium version.
 		console.log(process.versions["node"]); // The Node.js version.
-		console.log(process.versions["nw"]); // The NW.js version.
-		console.log(process.versions["nw-flavor"]); // The NW.js flavor.
 	}
 
 	/** Opens a new window. **/
 	public function openWindow() {
 		Window.open("https://nwjs.io", newWindow -> {
+			newWindow.on(Closed, () -> newWindow = null);
 			newWindow.on(Focus, () -> console.log('New window is focused'));
 		});
 	}

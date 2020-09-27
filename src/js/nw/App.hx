@@ -69,7 +69,7 @@ extern class App {
 		allowDestinationSubdomains: Bool
 	): Void;
 
-	/** Sets the proxy configuration which the Web engine will use to request network resources. **/
+	/** Sets the proxy configuration which the web engine will use to request network resources. **/
 	static function setProxyConfig(config: String, pacUrl: String): Void;
 
 	/** Unregisters a global keyboard shortcut. **/
