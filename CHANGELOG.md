@@ -2,6 +2,7 @@
 
 ## Version [0.4.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.3.0...v0.4.0)
 - Added the `js.nw.Screen` module.
+- Added the `@nwPlatform` metadata to APIs that are not cross-platform.
 
 ## Version [0.3.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.2.0...v0.3.0)
 - Added the `js.nw.Printer` module.
