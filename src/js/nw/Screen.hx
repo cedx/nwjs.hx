@@ -55,10 +55,10 @@ enum abstract DesktopMediaSource(String) {
 extern class Screen {
 
 	/** The object used to monitor the changes of screens and windows on the desktop. **/
-	final DesktopCaptureMonitor: DesktopCaptureMonitor;
+	static final DesktopCaptureMonitor: DesktopCaptureMonitor;
 
 	/** The list of screens connected to the computer. **/
-	final screens: Array<ScreenDefinition>;
+	static final screens: Array<ScreenDefinition>;
 
 	/** Initializes the `Screen` singleton object. **/
 	static function Init(): Void;
