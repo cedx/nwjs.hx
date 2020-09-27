@@ -18,6 +18,7 @@ extern class Menu {
 	function append(item: MenuItem): Void;
 
 	/** Creates the built-in menus within the menubar on Mac. **/
+	@nwPlatform("Mac")
 	function createMacBuiltin(appName: String, ?options: {?hideEdit: Bool, ?hideWindow: Bool}): Void;
 
 	/** Inserts the specified `item` at the given `position` of this menu. **/

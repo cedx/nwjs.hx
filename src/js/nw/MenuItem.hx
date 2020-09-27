@@ -17,6 +17,7 @@ extern class MenuItem extends EventEmitter<MenuItem> {
 	var icon: String;
 
 	/** Value indicating whether the item icon is treated as a template. **/
+	@nwPlatform("Mac")
 	var iconIsTemplate: Bool;
 
 	/** The key of the shortcut. **/
@@ -32,6 +33,7 @@ extern class MenuItem extends EventEmitter<MenuItem> {
 	var submenu: Menu;
 
 	/** The item tooltip. **/
+	@nwPlatform("Mac")
 	var tooltip: String;
 
 	/** The item type. **/
