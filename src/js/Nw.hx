@@ -30,3 +30,16 @@ enum abstract NwFlavor(String) from String {
 	/** The NW.js binary is an SDK build. **/
 	var Sdk = "sdk";
 }
+
+/** Defines the platforms supported by NW.js. **/
+enum abstract NwPlatform(String) {
+
+	/** The platform is Linux. **/
+	var Linux;
+
+	/** The platform is Apple macOS. **/
+	var Mac;
+
+	/** The platform is Microsoft Windows. **/
+	var Windows;
+}
