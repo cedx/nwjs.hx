@@ -117,7 +117,6 @@ extern class Window extends EventEmitter<Window> {
 	function blur(): Void;
 
 	/** Gets a value indicating whether the platform supports the `setVisibleOnAllWorkspaces()` method. **/
-	@nwPlatform("Linux", "Mac")
 	function canSetVisibleOnAllWorkspaces(): Bool;
 
 	/** Captures the visible area of this window. **/
@@ -230,14 +229,12 @@ extern class Window extends EventEmitter<Window> {
 	function setResizable(isResizable: Bool): Void;
 
 	/** Enables or disables the window's native shadow. **/
-	@nwPlatform("Mac")
 	function setShadow(hasShadow: Bool): Void;
 
 	/** Controls whether to show this window in taskbar or dock. **/
 	function setShowInTaskbar(isShown: Bool): Void;
 
 	/** Controls whether this window is visible on all workspaces simultaneously. **/
-	@nwPlatform("Linux", "Mac")
 	function setVisibleOnAllWorkspaces(isVisible: Bool): Void;
 
 	/** Shows this window. **/

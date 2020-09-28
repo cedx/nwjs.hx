@@ -8,14 +8,12 @@ import js.node.events.EventEmitter;
 extern class Tray extends EventEmitter<Tray> {
 
 	/** The alternate icon. **/
-	@nwPlatform("Mac")
 	var alticon: String;
 
 	/** The tray icon. **/
 	var icon: String;
 
 	/** Value indicating whether icons are treated as templates. **/
-	@nwPlatform("Mac")
 	var iconsAreTemplates: Bool;
 
 	/** The popup menu. **/
