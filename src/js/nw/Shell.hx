@@ -2,6 +2,7 @@ package js.nw;
 
 /** A collection of APIs that do desktop related jobs. **/
 @:native("nw.Shell")
+@:require(nwjs)
 extern class Shell {
 
 	/** Opens the given external URI in the desktop's default manner. **/

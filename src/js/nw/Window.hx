@@ -62,6 +62,7 @@ typedef CaptureScreenshotOptions = {
 
 /** A wrapper of the DOM's topmost `window` object. **/
 @:native("nw.Window")
+@:require(nwjs)
 extern class Window extends EventEmitter<Window> {
 
 	/** The cookies manager. **/

@@ -2,6 +2,7 @@
 
 ## Version [1.0.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.4.0...v1.0.0)
 - Added the `js.nw.Cookies` module.
+- Added the `@:require(nwjs)` metadata to most classes.
 - Removed the `@nwPlatform` metadata.
 - Updated the documentation.
 

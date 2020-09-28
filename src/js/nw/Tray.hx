@@ -5,6 +5,7 @@ import js.node.events.EventEmitter;
 
 /** An abstraction of different controls on different platforms, usually it's a small icon shown on the OS's notification area. **/
 @:native("nw.Tray")
+@:require(nwjs)
 extern class Tray extends EventEmitter<Tray> {
 
 	/** The alternate icon. **/

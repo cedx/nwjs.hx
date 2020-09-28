@@ -6,6 +6,7 @@ import js.node.events.EventEmitter.Event;
 
 /** Represents the application. **/
 @:native("nw.App")
+@:require(nwjs)
 extern class App {
 
 	/** The filtered command line arguments. **/

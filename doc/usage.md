@@ -14,7 +14,7 @@ TODO
 TODO
 
 ### Use the Chrome APIs
-[NW.js](https://nwjs.io) supports all APIs in the [Chrome Apps platform](https://developer.chrome.com/apps/api_index) and some APIs in the [Chrome Extensions platform](https://developer.chrome.com/extensions/api_index).
+[NW.js](https://nwjs.io) supports all APIs in the [Chrome Apps](https://developer.chrome.com/apps/api_index) platform and some APIs in the [Chrome Extensions](https://developer.chrome.com/extensions/api_index) platform.
 
 This library does not provide any extern for these APIs. If you need to consume Chrome APIs from your application, you will need to install one of the following [Haxelib](https://lib.haxe.org) packages:
 
