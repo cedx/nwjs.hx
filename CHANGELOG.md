@@ -2,7 +2,7 @@
 
 ## Version [1.0.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.4.0...v1.0.0)
 - Added the `js.nw.Cookies` module.
-- First stable version.
+- Updated the documentation.
 
 ## Version [0.4.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.3.0...v0.4.0)
 - Added the `js.nw.Screen` module.
