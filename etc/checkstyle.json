@@ -3,6 +3,7 @@
 	"exclude": {
 		"path": "RELATIVE_TO_SOURCE",
 		"HiddenField": ["js/nw/Window"],
+		"LineLength": ["js/nw/Cookies"],
 		"MemberName": [
 			"js/Nw",
 			"js/nw/App",

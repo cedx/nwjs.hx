@@ -9,7 +9,7 @@ import js.lib.Error;
 import js.lib.Promise;
 import js.node.Buffer;
 import js.node.events.EventEmitter;
-import js.nw.Printer;
+import js.nw.Printer.PrintOptions;
 
 /** Defines the data type of a captured image. **/
 enum abstract CaptureDataType(String) {

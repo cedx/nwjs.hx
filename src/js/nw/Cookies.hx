@@ -54,16 +54,16 @@ extern class Cookies {
 	final onChanged: OnChangedEvent;
 
 	/** Retrieves information about a single cookie. **/
-	function get(details: Dynamic, callback: Cookie -> Void): Void;
+	function get(details: {name: String, url: String}, callback: ?Cookie -> Void): Void;
 
 	/** Retrieves all cookies that match the given information. **/
-	function getAll(details: Dynamic, callback: Array<Cookie> -> Void): Void;
+	function getAll(details: {?domain: String, ?name: String, ?path: String, ?secure: Bool, ?session: Bool, ?url: String}, callback: Array<Cookie> -> Void): Void;
 
 	/** Deletes a cookie by name. **/
-	function remove(details: Dynamic, callback: Dynamic -> Void): Void;
+	function remove(details: {name: String, url: String}, callback: ?{name: String, url: String} -> Void): Void;
 
 	/** Sets a cookie with the given cookie data. **/
-	function set(details: Dynamic, callback: Cookie -> Void): Void;
+	function set(details: {url: String, ?domain: String, ?expirationDate: Float, ?httpOnly: Bool, ?name: String, ?path: String, ?sameSite: SameSiteStatus, ?secure: Bool, ?value: String}, callback: ?Cookie -> Void): Void;
 }
 
 /** Defines the underlying reason behind a cookie change. **/
