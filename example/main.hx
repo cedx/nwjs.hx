@@ -17,7 +17,7 @@ import js.nw.Window;
 using StringTools;
 
 /** A sample class. **/
-class Main {
+class Example {
 
 	/** Creates a native context menu. **/
 	public function createContextMenu() {

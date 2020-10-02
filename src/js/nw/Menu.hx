@@ -2,7 +2,6 @@ package js.nw;
 
 /** Represents a menubar or a context menu. **/
 @:native("nw.Menu")
-@:require(nwjs)
 extern class Menu {
 
 	/** The menu items. **/

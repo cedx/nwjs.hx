@@ -5,7 +5,6 @@ import js.node.events.EventEmitter;
 
 /** Represents an item in a menu. **/
 @:native("nw.MenuItem")
-@:require(nwjs)
 extern class MenuItem extends EventEmitter<MenuItem> {
 
 	/** Value indicating whether the checkbox is checked. **/

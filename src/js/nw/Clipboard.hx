@@ -2,7 +2,6 @@ package js.nw;
 
 /** An abstraction of the clipboard. **/
 @:native("nw.Clipboard")
-@:require(nwjs)
 extern class Clipboard {
 
 	/** Returns the clipboard object. **/

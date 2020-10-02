@@ -4,7 +4,6 @@ import js.Node.process;
 
 /** The top-level NW.js object. **/
 @:native("nw")
-@:require(nwjs)
 extern class Nw {
 
 	/** The build flavor of NW.js. **/

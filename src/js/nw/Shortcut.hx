@@ -5,7 +5,6 @@ import js.node.events.EventEmitter;
 
 /** Represents a global keyboard shortcut, also known as system-wide hotkey. **/
 @:native("nw.Shortcut")
-@:require(nwjs)
 extern class Shortcut extends EventEmitter<Shortcut> {
 
 	/** The key combinations of the shortcut. **/

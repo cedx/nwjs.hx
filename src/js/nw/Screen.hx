@@ -52,7 +52,6 @@ enum abstract DesktopMediaSource(String) {
 
 /** A collection of APIs to query the screens connected to the computer. **/
 @:native("nw.Screen")
-@:require(nwjs)
 extern class Screen {
 
 	/** The object used to monitor the changes of screens and windows on the desktop. **/
