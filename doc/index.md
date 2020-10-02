@@ -3,6 +3,8 @@
 
 Type definitions for using [NW.js](https://nwjs.io) with [Haxe](https://haxe.org).
 
+![NW.js](img/nwjs.png)
+
 ## Quick start
 Install the latest version of **Haxe externs for NW.js** with [Haxelib](https://lib.haxe.org):
 

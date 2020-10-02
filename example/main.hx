@@ -74,17 +74,17 @@ class Example {
 
 	/** Lists the version strings of NW.js. **/
 	public function getVersions() {
-		console.log(Nw.flavor); // The NW.js flavor.
-		console.log(Nw.version); // The NW.js version.
-		console.log(process.versions["chromium"]); // The Chromium version.
-		console.log(process.versions["node"]); // The Node.js version.
+		trace(Nw.flavor); // The NW.js flavor.
+		trace(Nw.version); // The NW.js version.
+		trace(process.versions["chromium"]); // The Chromium version.
+		trace(process.versions["node"]); // The Node.js version.
 	}
 
 	/** Opens a new window. **/
 	public function openWindow() {
 		Window.open("https://nwjs.io", newWindow -> {
 			newWindow.on(Closed, () -> newWindow = null);
-			newWindow.on(Focus, () -> console.log('New window is focused'));
+			newWindow.on(Focus, () -> trace('New window is focused'));
 		});
 	}
 
@@ -94,7 +94,7 @@ class Example {
 		final filePath = fileInput.value;
 		Fs.readFile(filePath, "utf8", (error, text) -> {
 			if (error != null) console.error(error);
-			else console.log(text);
+			else trace(text);
 		});
 	}
 
@@ -102,7 +102,7 @@ class Example {
 	public function readFilePaths() {
 		final fileInput = cast(document.querySelector('input[type="file"]'), InputElement);
 		final fileList = fileInput.files;
-		for (index in 0...fileList.length) console.log(untyped fileList[index].path);
+		for (index in 0...fileList.length) trace(untyped fileList[index].path);
 	}
 
 	/** Registers a global keyboard shortcut. **/
@@ -110,7 +110,7 @@ class Example {
 		final shortcut = new Shortcut({key : "Ctrl+Shift+A"});
 		shortcut.on(Active, () -> {
 			final self: Shortcut = nativeThis;
-			console.log('Global desktop keyboard shortcut: ${self.key} active.');
+			trace('Global desktop keyboard shortcut: ${self.key} active.');
 		});
 
 		App.registerGlobalHotKey(shortcut);
@@ -120,7 +120,7 @@ class Example {
 	public function useClipboard() {
 		final clipboard = Clipboard.get();
 		clipboard.set("I love NW.js :)", Text);
-		console.log(clipboard.get(Text));
+		trace(clipboard.get(Text));
 
 		final imagePath = Path.resolve("nw.png");
 		final imageData = Fs.readFileSync(imagePath).toString("base64");
@@ -130,7 +130,7 @@ class Example {
 		];
 
 		clipboard.set(clipboardData);
-		console.log(clipboard.get(Html));
+		trace(clipboard.get(Html));
 		clipboard.clear();
 	}
 
