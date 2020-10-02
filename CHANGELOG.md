@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.0.1](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.0...v1.0.1)
+- The `nwjs` conditional compilation flag is automatically defined by the [Haxe](https://haxe.org) compiler.
+
 ## Version [1.0.0](https://git.belin.io/cedx/nwjs.hx/compare/v0.4.0...v1.0.0)
 - Added the `js.nw.Cookies` module.
 - Added the `@:require(nwjs)` metadata to most classes.

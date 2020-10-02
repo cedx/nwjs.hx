@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Added the `Cookies` module, added the `@:require(nwjs)` metadata to most classes, removed the `@nwPlatform` metadata, updated the documentation.",
+	"releasenote": "The `nwjs` conditional compilation flag is automatically defined by the Haxe compiler.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
 	"version": "1.0.1"
