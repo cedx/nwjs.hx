@@ -8,5 +8,5 @@
 	"releasenote": "Added the `Cookies` module, added the `@:require(nwjs)` metadata to most classes, removed the `@nwPlatform` metadata, updated the documentation.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
-	"version": "1.0.0"
+	"version": "1.0.1"
 }
