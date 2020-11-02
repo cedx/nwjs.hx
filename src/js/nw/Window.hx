@@ -383,7 +383,7 @@ typedef WindowOpenOptions = WindowManifest & {
 	var ?inject_js_start: String;
 
 	/** Value indicating whether the Node.js and DOM contexts are merged in the new window's process. **/
-	var ?mixed_content: Bool;
+	var ?mixed_context: Bool;
 
 	/** Value indicating whether to open the new window in a separate render process. **/
 	var ?new_instance: Bool;
