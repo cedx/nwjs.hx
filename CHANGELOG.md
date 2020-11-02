@@ -1,7 +1,10 @@
 # Changelog
 
+## Version [1.0.3](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.2...v1.0.3)
+- Fixed the `WindowOpenOptions` type definition.
+
 ## Version [1.0.2](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.1...v1.0.2)
-- Added the `WindowOpenOptions.mixed_content` property.
+- Added the `WindowOpenOptions.mixed_context` property.
 
 ## Version [1.0.1](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.0...v1.0.1)
 - The `nwjs` conditional compilation flag is automatically defined by the [Haxe](https://haxe.org) compiler.

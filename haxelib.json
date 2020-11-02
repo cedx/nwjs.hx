@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Added the `WindowOpenOptions.mixed_content` property.",
+	"releasenote": "Fixed the `WindowOpenOptions` type definition.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
 	"version": "1.0.3"
