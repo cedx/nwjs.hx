@@ -17,7 +17,7 @@ extern class Shortcut extends EventEmitter<Shortcut> {
 	dynamic function active(): Void;
 
 	/** The callback invoked when failed to register the hotkey. **/
-	dynamic function failed(message: String): Void;
+	dynamic function failed(): Void;
 }
 
 /** Defines the events of a `Shortcut` instance. **/
@@ -27,7 +27,7 @@ enum abstract ShortcutEvent<T: Function>(Event<T>) to Event<T> {
 	var Active: ShortcutEvent<Void -> Void> = "active";
 
 	/** The `failed` event. **/
-	var Failed: ShortcutEvent<String -> Void> = "failed";
+	var Failed: ShortcutEvent<Void -> Void> = "failed";
 }
 
 /** Defines the options of a `Shortcut` instance. **/
