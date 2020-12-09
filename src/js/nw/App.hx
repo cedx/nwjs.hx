@@ -94,6 +94,13 @@ extern class App {
 	static function unregisterGlobalHotKey(shortcut: Shortcut): Void;
 }
 
+/** Defines the components of an `App` instance. **/
+enum abstract AppComponent(String) {
+
+	/** The Widevine component. **/
+	var Widevine = "WIDEVINE";
+}
+
 /** Defines the events of an `App` instance. **/
 enum abstract AppEvent<T: Function>(Event<T>) to Event<T> {
 
