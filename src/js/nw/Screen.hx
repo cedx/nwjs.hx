@@ -64,22 +64,22 @@ extern class Screen {
 	static function Init(): Void;
 
 	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
-	static function addListener<T: Function>(event: Event<T>, listener: T): Screen;
+	static function addListener<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Shows the desktop media picker UI with the specified set of `sources`. **/
 	static function chooseDesktopMedia(sources: Array<DesktopMediaSource>, callback: EitherType<Bool, String> -> Void): Void;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function off<T: Function>(event: Event<T>, listener: T): Screen;
+	static function off<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
-	static function on<T: Function>(event: Event<T>, listener: T): Screen;
+	static function on<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Adds a one-time `listener` that will be removed and then invoked whenever the next time `event` is triggered. **/
-	static function once<T: Function>(event: Event<T>, listener: T): Screen;
+	static function once<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function removeListener<T: Function>(event: Event<T>, listener: T): Screen;
+	static function removeListener<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 }
 
 /** Defines the structure of a screen. **/
