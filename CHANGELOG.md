@@ -1,5 +1,10 @@
 # Changelog
 
+## Version [1.1.0](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.3...v1.1.0)
+- Added the `AppComponent` enumeration.
+- Added the `enableComponent()` and `updateComponent()` methods to the `App` class.
+- Ported the documentation to [docsify](https://docsify.js.org).
+
 ## Version [1.0.3](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.2...v1.0.3)
 - Fixed the `WindowOpenOptions` type definition.
 
