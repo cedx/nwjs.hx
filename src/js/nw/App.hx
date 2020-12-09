@@ -52,6 +52,9 @@ extern class App {
 	/** Crashes the renderer process. **/
 	static function crashRenderer(): Void;
 
+	/** Enables an application component. **/
+	static function enableComponent(component: AppComponent, callback: String -> Void): Void;
+
 	/** Queries the proxy to be used for loading `url` in DOM. **/
 	static function getProxyForURL(url: String): Void;
 
@@ -83,6 +86,9 @@ extern class App {
 
 	/** Sets the proxy configuration which the web engine will use to request network resources. **/
 	static function setProxyConfig(config: String, pacUrl: String): Void;
+
+	/** Updates an application component. **/
+	static function updateComponent(component: AppComponent, callback: Bool -> Void): Void;
 
 	/** Unregisters a global keyboard shortcut. **/
 	static function unregisterGlobalHotKey(shortcut: Shortcut): Void;
