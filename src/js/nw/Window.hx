@@ -120,7 +120,7 @@ extern class Window extends EventEmitter<Window> {
 	function canSetVisibleOnAllWorkspaces(): Bool;
 
 	/** Captures the visible area of this window. **/
-	function capturePage(callback: EitherType<Buffer, String>, ?options: EitherType<CapturePageOptions, String>): Void;
+	function capturePage(callback: EitherType<Buffer, String> -> Void, ?options: EitherType<CapturePageOptions, String>): Void;
 
 	/** Captures a portion of this window. **/
 	@:overload(function(options: CaptureScreenshotOptions, callback: (Null<Error>, String) -> Void): Void {})
