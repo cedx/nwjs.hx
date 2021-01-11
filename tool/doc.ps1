@@ -10,6 +10,8 @@ haxelib run dox `
 	--define themeColor 0xffc105 `
 	--define version $version `
 	--define website "https://belin.io" `
+	--include "^js\.Nw" `
+	--include "^js\.nw\." `
 	--input-path var `
 	--output-path docs/api `
 	--title "Haxe externs for NW.js" `
