@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.1.1](https://git.belin.io/cedx/nwjs.hx/compare/v1.1.0...v1.1.1)
+- Fixed the `Window.capturePage()` typings.
+
 ## Version [1.1.0](https://git.belin.io/cedx/nwjs.hx/compare/v1.0.3...v1.1.0)
 - Added the `AppComponent` enumeration.
 - Added the `enableComponent()` and `updateComponent()` methods to the `App` class.
