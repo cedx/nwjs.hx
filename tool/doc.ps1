@@ -9,7 +9,7 @@ haxelib run dox `
 	--define source-path "https://git.belin.io/cedx/nwjs.hx/src/branch/main/src" `
 	--define themeColor 0xffc105 `
 	--define version $version `
-	--define website "https://belin.io" `
+	--define website "https://docs.belin.io/nwjs.hx" `
 	--include "^js\.Nw" `
 	--include "^js\.nw\." `
 	--input-path var `
