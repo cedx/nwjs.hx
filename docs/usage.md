@@ -47,7 +47,7 @@ class Main {
 ```
 
 API documentation for the `nwjs` externs is available at the following address:  
-[https://api.belin.io/nwjs.hx](https://api.belin.io/nwjs.hx)
+[https://cedx.github.io/nwjs.hx](https://api.belin.io/nwjs.hx/api)
 
 ?> For more information about the NW.js APIs, see [References](https://docs.nwjs.io/en/latest/References/App) in the [NW.js documentation](https://docs.nwjs.io).
 
@@ -68,9 +68,9 @@ class Main {
 	// Opens a given URL in the browser.
 	static function main() {
 		#if nwjs
-		Shell.openExternal("https://docs.belin.io/nwjs.hx");
+		Shell.openExternal("https://cedx.github.io/nwjs.hx");
 		#else
-		window.open("https://docs.belin.io/nwjs.hx", "_blank");
+		window.open("https://cedx.github.io/nwjs.hx", "_blank");
 		#end
 	}
 }
