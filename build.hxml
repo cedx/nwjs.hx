@@ -1,8 +1,8 @@
 --class-path src
 --define analyzer-optimize
 --define js-es=6
---js lib/nw.js
---library hxnodejs:12.1.0
+--js var/bundle.js
+--library hxnodejs
 
 js.Nw
 js.nw.App
