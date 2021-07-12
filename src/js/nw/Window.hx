@@ -12,7 +12,7 @@ import js.node.events.EventEmitter;
 import js.nw.Printer.PrintOptions;
 
 /** Defines the data type of a captured image. **/
-enum abstract CaptureDataType(String) {
+enum abstract CaptureDataType(String) to String {
 
 	/** The image data is a `Buffer` instance. **/
 	var Buffer = "buffer";
@@ -25,7 +25,7 @@ enum abstract CaptureDataType(String) {
 }
 
 /** Defines the format of a captured image. **/
-enum abstract CaptureImageFormat(String) {
+enum abstract CaptureImageFormat(String) to String {
 
 	/** The image format is JPEG. **/
 	var Jpeg = "jpeg";
@@ -412,7 +412,7 @@ typedef WindowPolicy = {
 }
 
 /** Defines the position of a `Window` instance. **/
-enum abstract WindowPosition(String) {
+enum abstract WindowPosition(String) to String {
 
 	/** The window is positioned in the center of the screen. **/
 	var Center = "center";

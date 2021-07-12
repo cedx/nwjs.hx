@@ -41,7 +41,7 @@ enum abstract DesktopCaptureMonitorEvent<T: Function>(Event<T>) to Event<T> {
 }
 
 /** Defines the desktop media sources used in `Screen.chooseDesktopMedia()` method. **/
-enum abstract DesktopMediaSource(String) {
+enum abstract DesktopMediaSource(String) to String {
 
 	/** The media source is a screen. **/
 	var Screen = "screen";

@@ -22,7 +22,7 @@ extern class Nw {
 }
 
 /** Defines the NW.js build flavors. **/
-enum abstract NwFlavor(String) from String {
+enum abstract NwFlavor(String) from String to String {
 
 	/** The NW.js binary is a normal build. **/
 	var Normal = "normal";
