@@ -1,7 +1,7 @@
 # Installation
 
 ## Requirements
-Before installing **Haxe externs for NW.js**, you need to make sure you have [Haxe](https://haxe.org) up and running.
+Before installing **Haxe Externs for NW.js**, you need to make sure you have [Haxe](https://haxe.org) up and running.
 You can verify if you're already good to go with the following command:
 
 ```shell

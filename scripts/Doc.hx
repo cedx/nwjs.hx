@@ -20,7 +20,7 @@ function main() {
 		"--include", "^js\\.nw\\.",
 		"--input-path", "var",
 		"--output-path", "docs/api",
-		"--title", "Haxe externs for NW.js",
+		"--title", "Haxe Externs for NW.js",
 		"--toplevel-package", "js"
 	]);
 

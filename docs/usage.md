@@ -1,5 +1,5 @@
 # Usage
-**Haxe externs for NW.js** provides type definitions for developing desktop applications with the [NW.js](https://nwjs.io) framework.
+**Haxe Externs for NW.js** provides type definitions for developing desktop applications with the [NW.js](https://nwjs.io) framework.
 
 If you haven't used [NW.js](https://nwjs.io) before, be sure to check out the [related documentation](https://docs.nwjs.io), as it explains how to create such applications.
 It is important that you understand the concept of [JavaScript contexts](https://docs.nwjs.io/en/latest/For%20Users/Advanced/JavaScript%20Contexts%20in%20NW.js) because the **NW.js externs are not usable in Node.js context**.
