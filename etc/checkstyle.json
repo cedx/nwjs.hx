@@ -1,21 +1,21 @@
 {
 	"defaultSeverity": "ERROR",
 	"exclude": {
-		"path": "RELATIVE_TO_SOURCE",
-		"HiddenField": ["js/nw/Window"],
-		"LineLength": ["js/nw/Cookies"],
+		"path": "RELATIVE_TO_PROJECT",
+		"HiddenField": ["src/js/nw/Window"],
+		"LineLength": ["src/js/nw/Cookies"],
 		"MemberName": [
-			"js/Nw",
-			"js/nw/App",
-			"js/nw/Clipboard",
-			"js/nw/Cookies",
-			"js/nw/Menu",
-			"js/nw/MenuItem",
-			"js/nw/Printer",
-			"js/nw/Screen",
-			"js/nw/Shortcut",
-			"js/nw/Tray",
-			"js/nw/Window"
+			"src/js/Nw",
+			"src/js/nw/App",
+			"src/js/nw/Clipboard",
+			"src/js/nw/Cookies",
+			"src/js/nw/Menu",
+			"src/js/nw/MenuItem",
+			"src/js/nw/Printer",
+			"src/js/nw/Screen",
+			"src/js/nw/Shortcut",
+			"src/js/nw/Tray",
+			"src/js/nw/Window"
 		]
 	},
 	"checks": [
