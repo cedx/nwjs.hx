@@ -13,5 +13,6 @@
 
 *.ico binary
 *.jpg binary
+*.n binary
 *.pdf binary
 *.png binary
