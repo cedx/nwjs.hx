@@ -18,42 +18,39 @@ import js.nw.Menu;
 import js.nw.MenuItem;
 import js.nw.Window;
 
-class Main {
-	static function main() {
-		// List the version strings of NW.js.
-		trace(Nw.flavor);
-		trace(Nw.version);
+function main() {
+	// List the version strings of NW.js.
+	trace(Nw.flavor);
+	trace(Nw.version);
 
-		// Open a new window.
-		Window.open("https://nwjs.io", newWindow -> {
-			newWindow.on(Focus, () -> trace('New window is focused'));
-		});
+	// Open a new window.
+	Window.open("https://nwjs.io", newWindow -> {
+		newWindow.on(Focus, () -> trace('New window is focused'));
+	});
 
-		// Read/write data to the clipboard.
-		final clipboard = Clipboard.get();
-		clipboard.set("I love NW.js :)", Text);
-		trace(clipboard.get(Text));
+	// Read/write data to the clipboard.
+	final clipboard = Clipboard.get();
+	clipboard.set("I love NW.js :)", Text);
+	trace(clipboard.get(Text));
 
-		// Create a native context menu.
-		final contextMenu = new Menu();
-		contextMenu.append(new MenuItem({label: "Item A"}));
+	// Create a native context menu.
+	final contextMenu = new Menu();
+	contextMenu.append(new MenuItem({label: "Item A"}));
 
-		document.body.addEventListener("contextmenu", event -> {
-			event.preventDefault();
-			contextMenu.popup(event.x, event.y);
-		});
-	}
+	document.body.addEventListener("contextmenu", event -> {
+		event.preventDefault();
+		contextMenu.popup(event.x, event.y);
+	});
 }
 ```
 
 API documentation for the `nwjs` externs is available at the following address:  
-[https://cedx.github.io/nwjs.hx](https://api.belin.io/nwjs.hx/api)
+[https://cedx.github.io/nwjs.hx/api](https://cedx.github.io/nwjs.hx/api)
 
 ?> For more information about the NW.js APIs, see [References](https://docs.nwjs.io/en/latest/References/App) in the [NW.js documentation](https://docs.nwjs.io).
 
 When this library is imported by the [Haxe compiler](https://haxe.org/manual/compiler-usage.html),
 the `nwjs` conditional compilation flag is automatically defined.
-
 This flag is useful if you are developing in parallel a web application and a desktop one based on the same code:
 it allows you to create different branches depending on the targeted platform.
 
@@ -64,15 +61,13 @@ import js.nw.Shell;
 import js.Browser.window;
 #end
 
-class Main {
-	// Opens a given URL in the browser.
-	static function main() {
-		#if nwjs
+// Opens a given URL in the browser.
+function main() {
+	#if nwjs
 		Shell.openExternal("https://cedx.github.io/nwjs.hx");
-		#else
+	#else
 		window.open("https://cedx.github.io/nwjs.hx", "_blank");
-		#end
-	}
+	#end
 }
 ```
 
@@ -81,8 +76,6 @@ see [Conditional Compilation](https://haxe.org/manual/lf-condition-compilation.h
 
 ## Using the Node.js APIs
 Access to the Node.js APIs is provided by the externs of the `hxnodejs` package, which is a dependency of this library.
-You don't have to explicitly list `hxnodejs` in your own dependencies (using the `--library` compiler argument).
-
 Most Node.js APIs are located in the `js.node` namespace and are consumed as is:
 
 ```haxe
@@ -91,21 +84,19 @@ import js.Node.require;
 import js.node.ChildProcess;
 import js.node.Fs;
 
-class Main {
-	static function main() {
-		// Log the operating system platform and processor architecture to the console.
-		trace('This platform is ${process.platform} on ${process.arch}.');
+function main() {
+	// Log the operating system platform and processor architecture to the console.
+	trace('This platform is ${process.platform} on ${process.arch}.');
 
-		// Read/write some text to the file system.
-		Fs.writeFileSync("message.txt", "Hello from NW.js!");
-		trace(Fs.readFileSync("message.txt", "utf8"));
+	// Read/write some text to the file system.
+	Fs.writeFileSync("message.txt", "Hello from NW.js!");
+	trace(Fs.readFileSync("message.txt", "utf8"));
 
-		// Spawn a new process.
-		ChildProcess.spawn("ls", ["-lh", "/usr"]);
+	// Spawn a new process.
+	ChildProcess.spawn("ls", ["-lh", "/usr"]);
 
-		// Import an external JavaScript module.
-		final module = require("./path/to/module.js");
-	}
+	// Import an external JavaScript module.
+	final module = require("./path/to/module.js");
 }
 ```
 
@@ -122,14 +113,12 @@ Nothing special is required to access the DOM APIs, just write your application 
 import js.Browser.alert;
 import js.Browser.navigator;
 
-class Main {
-	static function main() {
-		// Log the user agent string to the console.
-		trace(navigator.userAgent);
+function main() {
+	// Log the user agent string to the console.
+	trace(navigator.userAgent);
 
-		// Display an alert message box.
-		alert("Hello from NW.js!");
-	}
+	// Display an alert message box.
+	alert("Hello from NW.js!");
 }
 ```
 
