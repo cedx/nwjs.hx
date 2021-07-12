@@ -10,4 +10,4 @@ Install the latest version of **Haxe Externs for NW.js** with [lix](https://gith
 lix +lib nwjs
 ```
 
-For detailed instructions, see the [installation guide](installation.md).
+For detailed instructions, see the [installation guide](installation.md) and the [usage information](usage.md).
