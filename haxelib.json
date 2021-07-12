@@ -8,5 +8,5 @@
 	"releasenote": "Fixed the `Window.capturePage()` typings.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://cedx.github.io/nwjs.hx",
-	"version": "1.1.1"
+	"version": "1.2.0"
 }

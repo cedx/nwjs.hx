@@ -125,7 +125,7 @@ class Example {
 		final imagePath = Path.resolve("nw.png");
 		final imageData = Fs.readFileSync(imagePath).toString("base64");
 		final clipboardData: Array<ClipboardData> = [
-			{type: Html, data: '<img src="file://${imagePath.urlEncode()}">'},
+			{type: Html, data: '<img src="file://${imagePath.urlEncode()}"/>'},
 			{type: Png, data: imageData, raw: true}
 		];
 
