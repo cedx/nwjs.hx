@@ -16,6 +16,8 @@ function main() {
 		"--define", "themeColor", "0xffc105",
 		"--define", "version", Json.parse(getContent("haxelib.json")).version,
 		"--define", "website", "https://cedx.github.io/nwjs.hx",
+		"--include", "^js\\.Nw",
+		"--include", "^js\\.nw\\.",
 		"--input-path", "var",
 		"--output-path", "docs/api",
 		"--title", "Haxe externs for NW.js",
