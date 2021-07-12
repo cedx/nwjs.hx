@@ -15,7 +15,7 @@ function main() {
 		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
 		"--define", "themeColor", "0xffc105",
 		"--define", "version", Json.parse(getContent("haxelib.json")).version,
-		"--define", "website", "https://cedx.github.io/nwjs.hx",
+		"--define", "website", "https://github.com/cedx/nwjs.hx",
 		"--include", "^js\\.Nw",
 		"--include", "^js\\.nw\\.",
 		"--input-path", "var",
