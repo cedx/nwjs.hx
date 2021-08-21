@@ -1,0 +1,30 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Clean",
+			"group": "build",
+			"type": "shell", "command": "lix", "args": ["Clean"]
+		},
+		{
+			"label": "Doc",
+			"group": "build",
+			"type": "shell", "command": "lix", "args": ["Doc"]
+		},
+		{
+			"label": "Install",
+			"group": "build",
+			"type": "shell", "command": "lix", "args": ["download"]
+		},
+		{
+			"label": "Lint",
+			"group": "build",
+			"type": "shell", "command": "lix", "args": ["Lint"]
+		},
+		{
+			"label": "Publish",
+			"group": "build",
+			"type": "shell", "command": "lix", "args": ["Publish"]
+		}
+	]
+}
