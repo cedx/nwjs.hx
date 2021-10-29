@@ -6,7 +6,7 @@ You can verify if you're already good to go with the following command:
 
 ```shell
 haxe --version
-# 4.2.3
+# 4.2.4
 ```
 
 ## Installing with a package manager
