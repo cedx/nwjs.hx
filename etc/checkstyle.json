@@ -3,20 +3,7 @@
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
 		"HiddenField": ["src/js/nw/Window"],
-		"LineLength": ["src/js/nw/Cookies"],
-		"MemberName": [
-			"src/js/Nw",
-			"src/js/nw/App",
-			"src/js/nw/Clipboard",
-			"src/js/nw/Cookies",
-			"src/js/nw/Menu",
-			"src/js/nw/MenuItem",
-			"src/js/nw/Printer",
-			"src/js/nw/Screen",
-			"src/js/nw/Shortcut",
-			"src/js/nw/Tray",
-			"src/js/nw/Window"
-		]
+		"MemberName": ["src/js/nw/Printer", "src/js/nw/Screen", "src/js/nw/Window"]
 	},
 	"checks": [
 		{"type": "BlockBreakingConditional"},
@@ -64,8 +51,9 @@
 		{"type": "CatchParameterName"},
 		{"type": "ListenerName"},
 		{"type": "LocalVariableName"},
-		{"type": "MemberName"},
-		{"type": "MethodName", "props": {"format": "^([a-z][a-zA-Z0-9]*|__init__)$"}},
+		{"type": "MemberName", "props": {"format": "^[a-z][a-zA-Z0-9]*$", "tokens": ["CLASS", "TYPEDEF"]}},
+		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ENUM"]}},
+		{"type": "MethodName"},
 		{"type": "ParameterName"},
 		{"type": "TypeName"},
 
