@@ -6,23 +6,23 @@ import sys.io.File.*;
 
 /** Runs the script. **/
 function main() {
-	if (exists("docs/api")) removeDirectory("docs/api");
+	if (exists("docs")) removeDirectory("docs");
 
 	command("haxe --define doc-gen --no-output --xml var/api.xml build.hxml");
 	command("lix", [
 		"run", "dox",
 		"--define", "description", "Type definitions for using NW.js with Haxe.",
-		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
+		"--define", "source-path", "https://bitbucket.org/cedx/nwjs.hx/src/main/src",
 		"--define", "themeColor", "0xffc105",
 		"--define", "version", Json.parse(getContent("haxelib.json")).version,
-		"--define", "website", "https://cedx.github.io/nwjs.hx",
+		"--define", "website", "https://bitbucket.org/cedx/nwjs.hx",
 		"--include", "js\\.Nw",
 		"--include", "js\\.nw\\.*",
 		"--input-path", "var",
-		"--output-path", "docs/api",
+		"--output-path", "docs",
 		"--title", "Haxe Externs for NW.js",
 		"--toplevel-package", "js"
 	]);
 
-	copy("docs/favicon.ico", "docs/api/favicon.ico");
+	copy("www/favicon.ico", "docs/favicon.ico");
 }
