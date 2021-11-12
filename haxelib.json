@@ -5,8 +5,8 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Added implicit casts to abstract enumerations.",
+	"releasenote": "Updated the documentation, updated the project URL.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
-	"url": "https://cedx.github.io/nwjs.hx",
-	"version": "1.2.0"
+	"url": "https://bitbucket.org/cedx/nwjs.hx",
+	"version": "1.2.1"
 }
