@@ -22,11 +22,11 @@
 		{"type": "ReturnCount"},
 		{"type": "SimplifyBooleanExpression"},
 		{"type": "SimplifyBooleanReturn"},
-		{"type": "Trace"},
+		{"type": "Trace", "props": {"severity": "WARNING"}},
 		{"type": "UnusedLocalVar"},
 
 		{"type": "DocCommentStyle"},
-		{"type": "TODOComment"},
+		{"type": "TODOComment", "props": {"severity": "INFO"}},
 
 		{"type": "EmptyPackage"},
 		{"type": "Interface", "props": {"allowProperties": true}},
