@@ -1,5 +1,5 @@
 import Sys.*;
-import Tools.compress;
+import Tools;
 import haxe.Json;
 import sys.io.File.*;
 

@@ -1,5 +1,5 @@
 import Sys.*;
-import Tools.removeDirectory;
+import Tools;
 import haxe.Json;
 import sys.FileSystem.*;
 import sys.io.File.*;

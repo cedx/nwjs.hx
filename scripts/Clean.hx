@@ -1,4 +1,4 @@
-import Tools.cleanDirectory;
+import Tools;
 
 /** Runs the script. **/
 function main() cleanDirectory("var");
