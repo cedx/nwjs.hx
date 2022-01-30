@@ -4,7 +4,6 @@ import haxe.zip.Entry;
 import haxe.zip.Writer;
 import sys.FileSystem.*;
 import sys.io.File.*;
-
 using Lambda;
 using haxe.zip.Tools;
 

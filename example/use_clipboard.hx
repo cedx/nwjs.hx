@@ -1,7 +1,6 @@
 import js.node.Fs;
 import js.node.Path;
 import js.nw.Clipboard;
-
 using StringTools;
 
 /** Reads and writes data to the clipboard. **/
