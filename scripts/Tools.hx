@@ -1,26 +1,26 @@
 import haxe.crypto.Crc32;
-import haxe.io.Path.*;
 import haxe.zip.Entry;
 import haxe.zip.Writer;
-import sys.FileSystem.*;
-import sys.io.File.*;
+import sys.FileSystem;
+import sys.io.File;
 using Lambda;
+using haxe.io.Path;
 using haxe.zip.Tools;
 
 /** Recursively deletes all files in the specified `directory`. **/
-function cleanDirectory(directory: String) for (entry in readDirectory(directory).filter(entry -> entry != ".gitkeep")) {
-	final path = join([directory, entry]);
-	if (isDirectory(path)) removeDirectory(path);
-	else deleteFile(path);
+function cleanDirectory(directory: String) for (entry in FileSystem.readDirectory(directory).filter(entry -> entry != ".gitkeep")) {
+	final path = Path.join([directory, entry]);
+	if (FileSystem.isDirectory(path)) removeDirectory(path);
+	else FileSystem.deleteFile(path);
 }
 
 /** Creates a ZIP archive from the specified file system entities. **/
 function compress(sources: Array<String>, destination: String) {
-	final output = write(destination);
+	final output = File.write(destination);
 	final writer = new Writer(output);
 
 	var entries: Array<Entry> = [];
-	for (source in sources) entries = entries.concat(isDirectory(source) ? compressDirectory(source) : [compressFile(source)]);
+	for (source in sources) entries = entries.concat(FileSystem.isDirectory(source) ? compressDirectory(source) : [compressFile(source)]);
 	writer.write(entries.list());
 	output.close();
 }
@@ -28,15 +28,15 @@ function compress(sources: Array<String>, destination: String) {
 /** Recursively deletes the specified `directory`. **/
 function removeDirectory(directory: String) {
 	cleanDirectory(directory);
-	deleteDirectory(directory);
+	FileSystem.deleteDirectory(directory);
 }
 
 /** Compresses the content of the specified `directory` in ZIP format. **/
 private function compressDirectory(directory: String) {
 	var entries: Array<Entry> = [];
-	for (entry in readDirectory(directory)) {
-		final path = join([directory, entry]);
-		entries = entries.concat(isDirectory(path) ? compressDirectory(path) : [compressFile(path)]);
+	for (entry in FileSystem.readDirectory(directory)) {
+		final path = Path.join([directory, entry]);
+		entries = entries.concat(FileSystem.(path) ? compressDirectory(path) : [compressFile(path)]);
 	}
 
 	return entries;
@@ -44,7 +44,7 @@ private function compressDirectory(directory: String) {
 
 /** Compresses the specified `file` in ZIP format. **/
 private function compressFile(file: String) {
-	final bytes = getBytes(file);
+	final bytes = File.getBytes(file);
 	final entry: Entry = {
 		compressed: false,
 		crc32: Crc32.make(bytes),
@@ -52,7 +52,7 @@ private function compressFile(file: String) {
 		dataSize: bytes.length,
 		fileName: file,
 		fileSize: bytes.length,
-		fileTime: stat(file).mtime
+		fileTime: FileSystem.stat(file).mtime
 	};
 
 	entry.compress(9);

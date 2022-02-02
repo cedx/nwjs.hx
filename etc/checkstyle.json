@@ -2,6 +2,7 @@
 	"defaultSeverity": "ERROR",
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
+		"Dynamic": ["src/js/nw/App"],
 		"HiddenField": ["src/js/nw/Window"],
 		"MemberName": ["src/js/nw/Printer", "src/js/nw/Screen", "src/js/nw/Window"]
 	},
@@ -32,9 +33,11 @@
 		{"type": "Interface", "props": {"allowProperties": true}},
 		{"type": "UnnecessaryConstructor"},
 
+		{"type": "AvoidStarImport"},
 		{"type": "UnusedImport"},
 
 		{"type": "ArrayLiteral"},
+		{"type": "ERegLiteral"},
 		{"type": "HexadecimalLiteral"},
 		{"type": "StringLiteral"},
 
@@ -49,10 +52,11 @@
 		{"type": "RedundantModifier"},
 
 		{"type": "CatchParameterName"},
+		{"type": "ConstantName", "props": {"format": "^[a-z][a-zA-Z0-9]*$"}},
 		{"type": "ListenerName"},
 		{"type": "LocalVariableName"},
 		{"type": "MemberName", "props": {"format": "^[a-z][a-zA-Z0-9]*$", "tokens": ["CLASS", "TYPEDEF"]}},
-		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ENUM"]}},
+		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ABSTRACT", "ENUM"]}},
 		{"type": "MethodName"},
 		{"type": "ParameterName"},
 		{"type": "TypeName"},
@@ -65,6 +69,7 @@
 
 		{"type": "Anonymous"},
 		{"type": "AvoidIdentifier"},
+		{"type": "Dynamic"},
 
 		{"type": "ArrayAccess"},
 		{"type": "EmptyLines"},
