@@ -67,7 +67,6 @@
 		{"type": "MethodLength"},
 		{"type": "ParameterNumber"},
 
-		{"type": "Anonymous"},
 		{"type": "AvoidIdentifier"},
 		{"type": "Dynamic"},
 
