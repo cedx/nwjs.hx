@@ -56,7 +56,7 @@
 		{"type": "ListenerName"},
 		{"type": "LocalVariableName"},
 		{"type": "MemberName", "props": {"format": "^[a-z][a-zA-Z0-9]*$", "tokens": ["CLASS", "TYPEDEF"]}},
-		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ABSTRACT", "ENUM"]}},
+		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ENUM"]}},
 		{"type": "MethodName"},
 		{"type": "ParameterName"},
 		{"type": "TypeName"},
