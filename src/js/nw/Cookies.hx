@@ -51,7 +51,10 @@ typedef CookieChange = {
 extern class Cookies {
 
 	/** The event fired when a cookie is set or removed. **/
-	final onChanged: OnChangedEvent;
+	final onChanged: {
+		function addListener(listener: CookieChange -> Void): Void;
+		function removeListener(listener: CookieChange -> Void): Void;
+	};
 
 	/** Retrieves information about a single cookie. **/
 	function get(details: {name: String, url: String}, callback: ?Cookie -> Void): Void;
@@ -100,16 +103,6 @@ enum abstract OnChangedCause(String) to String {
 
 	/** The cookie was automatically removed due to a `set` call that overwrote it. **/
 	var Overwrite = "overwrite";
-}
-
-/** An event fired when a cookie is set or removed. **/
-typedef OnChangedEvent = {
-
-	/** Adds a `listener` that will be invoked when this event is triggered. **/
-	function addListener(listener: CookieChange -> Void): Void;
-
-	/** Removes the specified `listener` for this event. **/
-	function removeListener(listener: CookieChange -> Void): Void;
 }
 
 /** Defines the state of a cookie's `SameSite` attribute. **/
