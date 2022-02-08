@@ -1,5 +1,5 @@
 # Haxe Externs for NW.js
-![Haxe](https://flat.badgen.net/badge/haxe/%3E%3D4.2.0/green) ![NW.js](https://flat.badgen.net/badge/nwjs/%3E%3D0.60.0/green) ![Haxelib](https://flat.badgen.net/haxelib/v/nwjs) ![License](https://flat.badgen.net/haxelib/license/nwjs) ![Downloads](https://flat.badgen.net/haxelib/d/nwjs)
+![Haxe](https://flat.badgen.net/badge/haxe/%3E%3D4.2.0/green) ![NW.js](https://flat.badgen.net/badge/nwjs/%3E%3D0.61.0/green) ![Haxelib](https://flat.badgen.net/haxelib/v/nwjs) ![License](https://flat.badgen.net/haxelib/license/nwjs) ![Downloads](https://flat.badgen.net/haxelib/d/nwjs)
 
 Type definitions for using [NW.js](https://nwjs.io) with [Haxe](https://haxe.org).
 
