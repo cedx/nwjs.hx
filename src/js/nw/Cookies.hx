@@ -4,47 +4,47 @@ package js.nw;
 typedef Cookie = {
 
 	/** The cookie domain. **/
-	var domain: String;
+	domain: String,
 
 	/** The expiration date of the cookie as the number of seconds since the UNIX epoch. **/
-	var ?expirationDate: Float;
+	?expirationDate: Float,
 
 	/** Value indicating whether the cookie is a host-only cookie. **/
-	var hostOnly: Bool;
+	hostOnly: Bool,
 
 	/** Value indicating whether the cookie is marked as `HttpOnly`. **/
-	var httpOnly: Bool;
+	httpOnly: Bool,
 
 	/** The cookie name. **/
-	var name: String;
+	name: String,
 
 	/** The cookie path. **/
-	var path: String;
+	path: String,
 
 	/** The cookie's same-site status. **/
-	var sameSite: SameSiteStatus;
+	sameSite: SameSiteStatus,
 
 	/** Value indicating whether the cookie is marked as `Secure`. **/
-	var secure: Bool;
+	secure: Bool,
 
 	/** Value indicating whether the cookie is a session cookie. **/
-	var session: Bool;
+	session: Bool,
 
 	/** The cookie value. **/
-	var value: String;
+	value: String
 }
 
 /** Provides information about a cookie's change. **/
 typedef CookieChange = {
 
 	/** The underlying reason behind the cookie's change. **/
-	var cause: OnChangedCause;
+	cause: OnChangedCause,
 
 	/** Information about the cookie that was set or removed. **/
-	var cookie: Cookie;
+	cookie: Cookie,
 
 	/** Value indicating whether the cookie was removed. **/
-	var removed: Bool;
+	removed: Bool
 }
 
 /** A collection of the available cookies. **/

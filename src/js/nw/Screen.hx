@@ -86,25 +86,25 @@ extern class Screen {
 typedef ScreenDefinition = {
 
 	/** The physical screen resolution. **/
-	var bounds: {x: Int, y: Int, width: Int, height: Int};
+	bounds: {x: Int, y: Int, width: Int, height: Int},
 
 	/** The screen identifier. **/
-	var id: Int;
+	id: Int,
 
 	/** Value indicating whether the screen is built-in. **/
-	var isBuiltIn: Bool;
+	isBuiltIn: Bool,
 
 	/** The angle of rotation applied to the screen. **/
-	var rotation: Int;
+	rotation: Int,
 
 	/** The scale factor. **/
-	var scaleFactor: Float;
+	scaleFactor: Float,
 
 	/** The number of touch points supported by the screen. **/
-	var touchSupport: Int;
+	touchSupport: Int,
 
 	/** The usable area within the screen bounds. **/
-	var work_area: {x: Int, y: Int, width: Int, height: Int};
+	work_area: {x: Int, y: Int, width: Int, height: Int}
 }
 
 /** Defines the events of a `Screen` instance. **/

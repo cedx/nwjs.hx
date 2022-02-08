@@ -33,12 +33,12 @@ enum abstract ShortcutEvent<T: Function>(Event<T>) to Event<T> {
 /** Defines the options of a `Shortcut` instance. **/
 typedef ShortcutOptions = {
 
+	/** The key combinations of the shortcut. **/
+	key: String,
+
 	/** The callback to invoke when the hotkey is triggered. **/
-	var ?active: () -> Void;
+	?active: () -> Void,
 
 	/** The callback to invoke when failed to register the hotkey. **/
-	var ?failed: () -> Void;
-
-	/** The key combinations of the shortcut. **/
-	var key: String;
+	?failed: () -> Void
 }

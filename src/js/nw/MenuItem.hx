@@ -59,34 +59,34 @@ enum abstract MenuItemEvent<T: Function>(Event<T>) to Event<T> {
 typedef MenuItemOptions = {
 
 	/** Value indicating whether the checkbox is checked. **/
-	var ?checked: Bool;
+	?checked: Bool,
 
 	/** The callback to invoke when the user activates the item. **/
-	var ?click: () -> Void;
+	?click: () -> Void,
 
 	/** Value indicating whether the item is enabled. **/
-	var ?enabled: Bool;
+	?enabled: Bool,
 
 	/** The item icon. **/
-	var ?icon: String;
+	?icon: String,
 
 	/** The key of the shortcut. **/
-	var ?key: String;
+	?key: String,
 
 	/** The item label. **/
-	var ?label: String;
+	?label: String,
 
 	/** The modifiers of the shortcut. **/
-	var ?modifiers: String;
+	?modifiers: String,
 
 	/** The item submenu. **/
-	var ?submenu: Menu;
+	?submenu: Menu,
 
 	/** The item tooltip. **/
-	var ?tooltip: String;
+	?tooltip: String,
 
 	/** The item type. **/
-	var ?type: MenuItemType;
+	?type: MenuItemType
 }
 
 /** Defines the type of a menu item. **/
