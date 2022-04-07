@@ -43,20 +43,20 @@ enum abstract TrayEvent<T: Function>(Event<T>) to Event<T> {
 typedef TrayOptions = {
 
 	/** The alternate icon. **/
-	?alticon: String,
+	var ?alticon: String;
 
 	/** The tray icon. **/
-	?icon: String,
+	var ?icon: String;
 
 	/** Value indicating whether icons are treated as templates. **/
-	?iconsAreTemplates: Bool,
+	var ?iconsAreTemplates: Bool;
 
 	/** The popup menu. **/
-	?menu: Menu,
+	var ?menu: Menu;
 
 	/** The tray title. **/
-	?title: String,
+	var ?title: String;
 
 	/** The tray tooltip. **/
-	?tooltip: String
+	var ?tooltip: String;
 }

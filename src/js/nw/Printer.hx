@@ -4,16 +4,16 @@ package js.nw;
 typedef PrintCustomMargins = {
 
 	/** The bottom margin. **/
-	marginBottom: Int,
+	var marginBottom: Int;
 
 	/** The left margin. **/
-	marginLeft: Int,
+	var marginLeft: Int;
 
 	/** The right margin. **/
-	marginRight: Int,
+	var marginRight: Int;
 
 	/** The top margin. **/
-	marginTop: Int
+	var marginTop: Int;
 }
 
 /** Defines the type of print margins. **/
@@ -36,78 +36,78 @@ enum abstract PrintMarginsType(Int) to Int {
 typedef PrintMediaSize = {
 
 	/** The custom display name. **/
-	custom_display_name: String,
+	var custom_display_name: String;
 
 	/** The media height. **/
-	height_microns: Int,
+	var height_microns: Int;
 
 	/** Value indicating whether this media size is the default one. **/
-	is_default: Bool,
+	var is_default: Bool;
 
 	/** The media name. **/
-	name: String,
+	var name: String;
 
 	/** The media width. **/
-	width_microns: Int
+	var width_microns: Int;
 }
 
 /** Defines the options of the `Window.print()` method. **/
 typedef PrintOptions = {
 
 	/** Value indicating whether to print without the need for user's interaction. **/
-	?autoprint: Bool,
+	var ?autoprint: Bool;
 
 	/** The number of copies to print. **/
-	?copies: Int,
+	var ?copies: Int;
 
 	/** The string to replace the URL in the footer. **/
-	?footerString: String,
+	var ?footerString: String;
 
 	/** The string to replace the URL in the header. **/
-	?headerString: String,
+	var ?headerString: String;
 
 	/** Value indicating whether to use landscape or portrait. **/
-	?landscape: Bool,
+	var ?landscape: Bool;
 
 	/** The settings of custom margins. **/
-	?marginsCustom: PrintCustomMargins,
+	var ?marginsCustom: PrintCustomMargins;
 
 	/** The type of printer margins. **/
-	?marginsType: PrintMarginsType,
+	var ?marginsType: PrintMarginsType;
 
 	/** The paper size specification. **/
-	?mediaSize: PrintMediaSize,
+	var ?mediaSize: PrintMediaSize;
 
 	/** The path of the output file when printing to PDF. **/
-	?pdf_path: String,
+	var ?pdf_path: String;
 
 	/** The device name of the printer. **/
-	?printer: String,
+	var ?printer: String;
 
 	/** The scale factor. **/
-	?scaleFactor: Int,
+	var ?scaleFactor: Int;
 
 	/** Value indicating whether to print CSS backgrounds. **/
-	?shouldPrintBackgrounds: Bool,
+	var ?shouldPrintBackgrounds: Bool;
 
 	/** Value indicating whether to hide the flashing print preview dialog. **/
-	?silent: Bool
+	var ?silent: Bool;
 }
 
 /** Represents a printer. **/
 typedef Printer = {
 
 	/** The device name. **/
-	deviceName: String,
+	var deviceName: String;
 
 	/** The printer description. **/
-	printerDescription: String,
+	var printerDescription: String;
 
 	/** The printer name. **/
-	printerName: String,
+	var printerName: String;
 
 	/** The printer options. **/
-	printerOptions: PrinterOptions
+	var printerOptions: PrinterOptions;
 }
 
 /** Defines the options of a `Printer` instance. **/

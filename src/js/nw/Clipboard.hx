@@ -28,13 +28,13 @@ extern class Clipboard {
 typedef ClipboardData = {
 
 	/** The clipboard data. **/
-	data: String,
+	var data: String;
 
 	/** Value indicating whether to require raw image data. **/
-	?raw: Bool,
+	var ?raw: Bool;
 
 	/** The type of clipboard data.  **/
-	?type: ClipboardDataType
+	var ?type: ClipboardDataType;
 }
 
 /** Defines the type of clipboard data. **/

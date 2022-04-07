@@ -38,26 +38,26 @@ enum abstract CaptureImageFormat(String) to String {
 typedef CapturePageOptions = {
 
 	/** The data type of the captured image. **/
-	?datatype: CaptureDataType,
+	var ?datatype: CaptureDataType;
 
 	/** The image format. **/
-	?format: CaptureImageFormat
+	var ?format: CaptureImageFormat;
 }
 
 /** Defines the options of the `Window.captureScreenshot()` method. **/
 typedef CaptureScreenshotOptions = {
 
 	/** Captures the screenshot of a given region only. **/
-	?clip: {x: Float, y: Float, width: Float, height: Float, scale: Float},
+	var ?clip: {x: Float, y: Float, width: Float, height: Float, scale: Float};
 
 	/** The image format. **/
-	?format: CaptureImageFormat,
+	var ?format: CaptureImageFormat;
 
 	/** Value indicating whether to capture the whole page beyond the visible area. **/
-	?fullSize: Bool,
+	var ?fullSize: Bool;
 
 	/** The compression quality. **/
-	?quality: Int
+	var ?quality: Int;
 }
 
 /** A wrapper of the DOM's topmost `window` object. **/
@@ -313,102 +313,102 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 typedef WindowManifest = {
 
 	/** Value indicating whether the window should always stay on top of other windows. **/
-	?always_on_top: Bool,
+	var ?always_on_top: Bool;
 
 	/** Value indicating whether to show the window as desktop background window under X11 environment. **/
-	?as_desktop: Bool,
+	var ?as_desktop: Bool;
 
 	/** Value indicating whether the window is frameless. **/
-	?frame: Bool,
+	var ?frame: Bool;
 
 	/** Value indicating whether the window is fullscreen. **/
-	?fullscreen: Bool,
+	var ?fullscreen: Bool;
 
 	/** The initial inner height of the main window. **/
-	?height: Int,
+	var ?height: Int;
 
 	/** The path to the window's icon. **/
-	?icon: String,
+	var ?icon: String;
 
 	/** The window identifier. **/
-	?id: String,
+	var ?id: String;
 
 	/** Value indicating whether to use the kiosk mode. **/
-	?kiosk: Bool,
+	var ?kiosk: Bool;
 
 	/** The maximum inner height of the window. **/
-	?max_height: Bool,
+	var ?max_height: Bool;
 
 	/** The maximum inner width of the window. **/
-	?max_width: Bool,
+	var ?max_width: Bool;
 
 	/** The minimum inner height of the window. **/
-	?min_height: Bool,
+	var ?min_height: Bool;
 
 	/** The minimum inner width of the window. **/
-	?min_width: Bool,
+	var ?min_width: Bool;
 
 	/** Value indicating where the window will be positioned. **/
-	?position: WindowPosition,
+	var ?position: WindowPosition;
 
 	/** Value indicating whether the window is resizable. **/
-	?resizable: Bool,
+	var ?resizable: Bool;
 
 	/** Value indicating whether to show the window on startup. **/
-	?show: Bool,
+	var ?show: Bool;
 
 	/** Value indicating whether the window is shown in the taskbar or dock. **/
-	?show_in_taskbar: Bool,
+	var ?show_in_taskbar: Bool;
 
 	/** The default title of windows. **/
-	?title: String,
+	var ?title: String;
 
 	/** Value indicating whether to turn on transparency. **/
-	?transparent: Bool,
+	var ?transparent: Bool;
 
 	/** Value indicating whether the window should be visible on all workspaces simultaneously. **/
-	?visible_on_all_workspaces: Bool,
+	var ?visible_on_all_workspaces: Bool;
 
 	/** The initial inner width of the main window. **/
-	?width: Int
+	var ?width: Int;
 }
 
 /** Defines the options of the `Window.open()` method. **/
 typedef WindowOpenOptions = WindowManifest & {
 
 	/** The script to be injected after the DOM is loaded, before the `onload` event is fired. **/
-	?inject_js_end: String,
+	var ?inject_js_end: String;
 
 	/** The script to be injected before any DOM is constructed and any script is run. **/
-	?inject_js_start: String,
+	var ?inject_js_start: String;
 
 	/** Value indicating whether the Node.js and DOM contexts are merged in the new window's process. **/
-	?mixed_context: Bool,
+	var ?mixed_context: Bool;
 
 	/** Value indicating whether to open the new window in a separate render process. **/
-	?new_instance: Bool
+	var ?new_instance: Bool;
 }
 
 /** Defines the policy of a `Window` instance. **/
 typedef WindowPolicy = {
 
 	/** Forces the link to be opened in the same frame. **/
-	?forceCurrent: () -> Void,
+	var ?forceCurrent: () -> Void;
 
 	/** Forces the link to be downloaded or opened by an external program. **/
-	?forceDownload: () -> Void,
+	var ?forceDownload: () -> Void;
 
 	/** Forces the link to be opened in a new popup window. **/
-	?forceNewPopup: () -> Void,
+	var ?forceNewPopup: () -> Void;
 
 	/** Forces the link to be opened in a new window. **/
-	?forceNewWindow: () -> Void,
+	var ?forceNewWindow: () -> Void;
 
 	/** Ignores the request. **/
-	ignore: () -> Void,
+	var ignore: () -> Void;
 
 	/** Controls the options for the new popup window. **/
-	?setNewWindowManifest: WindowManifest -> Void
+	var ?setNewWindowManifest: WindowManifest -> Void;
 }
 
 /** Defines the position of a `Window` instance. **/
