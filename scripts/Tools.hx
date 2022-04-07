@@ -36,7 +36,7 @@ private function compressDirectory(directory: String) {
 	var entries: Array<Entry> = [];
 	for (entry in FileSystem.readDirectory(directory)) {
 		final path = Path.join([directory, entry]);
-		entries = entries.concat(FileSystem.(path) ? compressDirectory(path) : [compressFile(path)]);
+		entries = entries.concat(FileSystem.isDirectory(path) ? compressDirectory(path) : [compressFile(path)]);
 	}
 
 	return entries;
