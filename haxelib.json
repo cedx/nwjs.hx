@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Updated the documentation, updated the project URL.",
+	"releasenote": "Updated the project URL.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://github.com/cedx/nwjs.hx",
 	"version": "1.2.2"
