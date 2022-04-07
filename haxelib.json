@@ -7,6 +7,6 @@
 	"name": "nwjs",
 	"releasenote": "Updated the documentation, updated the project URL.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
-	"url": "https://bitbucket.org/cedx/nwjs.hx",
+	"url": "https://github.com/cedx/nwjs.hx",
 	"version": "1.2.1"
 }

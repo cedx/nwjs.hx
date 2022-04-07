@@ -10,10 +10,10 @@ function main() {
 	Sys.command("lix", [
 		"run", "dox",
 		"--define", "description", "Type definitions for using NW.js with Haxe.",
-		"--define", "source-path", "https://bitbucket.org/cedx/nwjs.hx/src/main/src",
+		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
 		"--define", "themeColor", "0xffc105",
 		"--define", "version", Json.parse(File.getContent("haxelib.json")).version,
-		"--define", "website", "https://bitbucket.org/cedx/nwjs.hx",
+		"--define", "website", "https://github.com/cedx/nwjs.hx",
 		"--include", "js\\.Nw",
 		"--include", "js\\.nw\\.*",
 		"--input-path", "var",

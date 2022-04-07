@@ -4,13 +4,13 @@
 Type definitions for using [NW.js](https://nwjs.io) with [Haxe](https://haxe.org).
 
 ## Documentation
-- [User guide](https://bitbucket.org/cedx/nwjs.hx/wiki)
+- [User guide](https://github.com/cedx/nwjs.hx/wiki)
 - [API reference](https://cedx.github.io/nwjs.hx)
 
 ## Development
-- [Git repository](https://bitbucket.org/cedx/nwjs.hx)
+- [Git repository](https://github.com/cedx/nwjs.hx)
 - [Haxelib package](https://lib.haxe.org/p/nwjs)
-- [Submit an issue](https://bitbucket.org/cedx/nwjs.hx/issues)
+- [Submit an issue](https://github.com/cedx/nwjs.hx/issues)
 
 ## License
-[Haxe Externs for NW.js](https://bitbucket.org/cedx/nwjs.hx) is distributed under the MIT License.
+[Haxe Externs for NW.js](https://github.com/cedx/nwjs.hx) is distributed under the MIT License.
