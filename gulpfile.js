@@ -66,7 +66,7 @@ export function version() {
 	return gulp.src("package.json").pipe(replace(/"version": "\d+(\.\d+){2}"/, `"version": "${pkg.version}"`)).pipe(gulp.dest("."));
 }
 
-/** The default task. */
+/** Runs the default task. */
 export default gulp.series(
 	clean,
 	version
