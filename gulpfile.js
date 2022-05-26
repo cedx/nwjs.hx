@@ -1,5 +1,5 @@
 import {createWriteStream, existsSync, readFileSync} from "node:fs";
-import {cp} from "node:fs/promises";
+import {cp, rm} from "node:fs/promises";
 import archiver from "archiver";
 import del from "del";
 import {execa} from "execa";
@@ -17,7 +17,7 @@ export function clean() {
 
 /** Builds the documentation. */
 export async function doc() {
-	await del("docs");
+	await rm("docs", {force: true, recursive: true});
 	await exec("haxe", ["--define", "doc-gen", "--no-output", "--xml", "var/api.xml", "build.hxml"]);
 	await exec("lix", [
 		"run", "dox",
@@ -51,7 +51,7 @@ export async function lint() {
 
 /** Publishes the package in the registry. */
 export async function publish() {
-	await del("var/haxelib.zip");
+	await rm("var/haxelib.zip", {force: true});
 
 	const archive = archiver("zip");
 	const output = createWriteStream("var/haxelib.zip");
