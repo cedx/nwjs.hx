@@ -3,8 +3,9 @@
 	"compilerOptions": {
 		"checkJs": true,
 		"esModuleInterop": true,
-		"module": "es2022",
-		"moduleResolution": "node",
+		"module": "esnext",
+		"moduleResolution": "nodenext",
+		"resolveJsonModule": true,
 		"strict": true,
 		"target": "es2022"
 	}

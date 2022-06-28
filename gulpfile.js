@@ -1,4 +1,4 @@
-import {createWriteStream, existsSync, readFileSync} from "node:fs";
+import {createWriteStream, existsSync} from "node:fs";
 import {cp, rm} from "node:fs/promises";
 import archiver from "archiver";
 import del from "del";
@@ -6,9 +6,7 @@ import {execa} from "execa";
 import log from "fancy-log";
 import gulp from "gulp";
 import replace from "gulp-replace";
-
-// The package configuration.
-const pkg = JSON.parse(readFileSync("haxelib.json", "utf8"));
+import haxelib from "./haxelib.json" assert {type: "json"};
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
@@ -24,7 +22,7 @@ export async function doc() {
 		"--define", "description", "Type definitions for using NW.js with Haxe.",
 		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
 		"--define", "themeColor", "0xffc105",
-		"--define", "version", pkg.version,
+		"--define", "version", haxelib.version,
 		"--define", "website", "https://github.com/cedx/nwjs.hx",
 		"--include", "js\\.Nw",
 		"--include", "js\\.nw\\.*",
@@ -58,13 +56,13 @@ export async function publish() {
 	archive.on("error", error => { throw error; }).pipe(output);
 	archive.glob("*.md").glob("haxelib.json").directory("src", "src").finalize();
 
-	for (const command of [["tag"], ["push", "origin"]]) await exec("git", [...command, `v${pkg.version}`]);
+	for (const command of [["tag"], ["push", "origin"]]) await exec("git", [...command, `v${haxelib.version}`]);
 	log("The package is ready to be published using 'haxelib submit var/haxelib.zip'.");
 }
 
 /** Updates the version number in the sources. */
 export function version() {
-	return gulp.src("package.json").pipe(replace(/"version": "\d+(\.\d+){2}"/, `"version": "${pkg.version}"`)).pipe(gulp.dest("."));
+	return gulp.src("package.json").pipe(replace(/"version": "\d+(\.\d+){2}"/, `"version": "${haxelib.version}"`)).pipe(gulp.dest("."));
 }
 
 /** Runs the default task. */
