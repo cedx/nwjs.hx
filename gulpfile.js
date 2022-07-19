@@ -1,7 +1,7 @@
 import {createWriteStream, existsSync} from "node:fs";
 import {cp, rm} from "node:fs/promises";
 import archiver from "archiver";
-import del from "del";
+import {deleteAsync} from "del";;
 import {execa} from "execa";
 import log from "fancy-log";
 import gulp from "gulp";
@@ -10,7 +10,7 @@ import haxelib from "./haxelib.json" assert {type: "json"};
 
 /** Deletes all generated files and reset any saved state. */
 export function clean() {
-	return del(["lib", "res", "var/**/*"]);
+	return deleteAsync(["lib", "res", "var/**/*"]);
 }
 
 /** Builds the documentation. */
