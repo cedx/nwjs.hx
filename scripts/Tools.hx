@@ -30,10 +30,6 @@ function removeDirectory(directory: String) {
 	FileSystem.deleteDirectory(directory);
 }
 
-/** Replaces in the specified `file` the substring which the `pattern` matches with the given `replacement`. **/
-function replaceInFile(file: String, pattern: EReg, replacement: String)
-	File.saveContent(file, pattern.replace(File.getContent(file), replacement));
-
 /** Compresses the content of the specified `directory` in ZIP format. **/
 private function compressDirectory(directory: String) {
 	var entries: Array<Entry> = [];
