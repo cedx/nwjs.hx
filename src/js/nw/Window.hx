@@ -17,7 +17,7 @@ enum abstract CaptureDataType(String) to String {
 	/** The image data is a `Buffer` instance. **/
 	var Buffer = "buffer";
 
-	/** The image data is a [Data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). **/
+	/** The image data is a [Data URI](https://developer.mozilla.org/docs/Web/HTTP/Basics_of_HTTP/Data_URIs). **/
 	var DataUri = "datauri";
 
 	/** The image data is a [Base64](https://en.wikipedia.org/wiki/Base64) string. **/
