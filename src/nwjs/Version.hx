@@ -46,6 +46,10 @@ import sys.io.Process;
 
 	/** The hash of the current Git commit. **/
 	public static var gitCommitHash(get, null): String;
+		static function get_gitCommitHash() {
+			if (gitCommitHash == null) gitCommitHash = getGitCommitHash();
+			return gitCommitHash;
+		}
 
 	/** The name of the Haxe target. **/
 	public static var haxeTarget(get, never): HaxeTarget;
@@ -57,18 +61,10 @@ import sys.io.Process;
 
 	/** The package version of this program. **/
 	public static var packageVersion(get, null): String;
-
-	/** Gets the hash of the current Git commit. **/
-	static function get_gitCommitHash() {
-		if (gitCommitHash == null) gitCommitHash = getGitCommitHash();
-		return gitCommitHash;
-	}
-
-	/** Gets the package version of this program. **/
-	static function get_packageVersion() {
-		if (packageVersion == null) packageVersion = getPackageVersion();
-		return packageVersion;
-	}
+		static function get_packageVersion() {
+			if (packageVersion == null) packageVersion = getPackageVersion();
+			return packageVersion;
+		}
 
 	/** Gets the hash of the current Git commit. **/
 	macro static function getGitCommitHash() {
