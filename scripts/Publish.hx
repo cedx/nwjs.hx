@@ -1,7 +1,7 @@
 //! --class-path src
 import nwjs.Version;
 
-/** Runs the script. **/
+/** Publishes the package. **/
 function main() {
 	Tools.compress(["CHANGELOG.md", "LICENSE.md", "README.md", "haxelib.json", "src"], "var/haxelib.zip");
 	Sys.command("haxelib submit var/haxelib.zip");
