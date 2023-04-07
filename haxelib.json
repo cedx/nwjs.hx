@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Updated the project URL.",
+	"releasenote": "Added the `App.setCrashDumpDir()` method, added the `setTransparent()` and `unmaximize()` methods to the `Window` class.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://github.com/cedx/nwjs.hx",
 	"version": "1.3.0"
