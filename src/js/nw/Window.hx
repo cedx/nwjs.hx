@@ -265,6 +265,10 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 	/** The `blur` event. **/
 	var Blur: WindowEvent<Void -> Void> = "blur";
 
+	/** The `capturepagedone` event. **/
+	@:deprecated
+	var CapturePageDone: WindowEvent<Void -> Void> = "capturepagedone";
+
 	/** The `close` event. **/
 	var Close: WindowEvent<Void -> Void> = "close";
 
@@ -273,6 +277,10 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `devtools-closed` event. **/
 	var DevToolsClosed: WindowEvent<Void -> Void> = "devtools-closed";
+
+	/** The `devtools-opened` event. **/
+	@:deprecated
+	var DevToolsOpened: WindowEvent<String -> Void> = "devtools-opened";
 
 	/** The `document-end` event. **/
 	var DocumentEnd: WindowEvent<Null<IFrameElement> -> Void> = "document-end";
@@ -285,6 +293,10 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `focus` event. **/
 	var Focus: WindowEvent<Void -> Void> = "focus";
+
+	/** The `leave-fullscreen` event. **/
+	@:deprecated
+	var LeaveFullscreen: WindowEvent<Void -> Void> = "leave-fullscreen";
 
 	/** The `loaded` event. **/
 	var Loaded: WindowEvent<Void -> Void> = "loaded";
