@@ -234,6 +234,10 @@ extern class Window extends EventEmitter<Window> {
 	/** Controls whether to show this window in taskbar or dock. **/
 	function setShowInTaskbar(isShown: Bool): Void;
 
+	/** Turns on/off the transparency support. **/
+	@:deprecated
+	function setTransparent(transparent: Bool): Void;
+
 	/** Controls whether this window is visible on all workspaces simultaneously. **/
 	function setVisibleOnAllWorkspaces(isVisible: Bool): Void;
 
@@ -249,6 +253,10 @@ extern class Window extends EventEmitter<Window> {
 
 	/** Toggles the kiosk mode. **/
 	function toggleKioskMode(): Void;
+
+	/** Unmaximizes this window. **/
+	@:deprecated
+	function unmaximize(): Void;
 }
 
 /** Defines the events of a `Window` instance. **/
