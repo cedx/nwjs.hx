@@ -84,6 +84,10 @@ extern class App {
 		allowDestinationSubdomains: Bool
 	): Void;
 
+	/** Set the directory where the minidump file will be saved on crash. **/
+	@:deprecated
+	static function setCrashDumpDir(directory: String): Void;
+
 	/** Sets the proxy configuration which the web engine will use to request network resources. **/
 	static function setProxyConfig(config: String, pacUrl: String): Void;
 
