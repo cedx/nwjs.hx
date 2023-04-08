@@ -5,7 +5,7 @@ Type definitions for using [NW.js](https://nwjs.io) with [Haxe](https://haxe.org
 
 ## Documentation
 - [User guide](https://github.com/cedx/nwjs.hx/wiki)
-- [API reference](https://cedx.github.io/nwjs.hx)
+- [API reference](https://docs.belin.io/nwjs.hx)
 
 ## Development
 - [Git repository](https://github.com/cedx/nwjs.hx)
