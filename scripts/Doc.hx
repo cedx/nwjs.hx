@@ -11,7 +11,7 @@ function main() {
 	Sys.command("lix", ["run", "dox",
 		"--define", "description", "Type definitions for using NW.js with Haxe.",
 		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
-		"--define", "themeColor", "0xffc105",
+		"--define", "themeColor", "0xea8220",
 		"--define", "version", Version.packageVersion,
 		"--define", "website", "https://github.com/cedx/nwjs.hx",
 		"--include", "js\\.Nw",
