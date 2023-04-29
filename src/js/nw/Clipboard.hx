@@ -11,17 +11,17 @@ extern class Clipboard {
 	function clear(): Void;
 
 	/** Gets the data from the clipboard. **/
-	@:overload(function(data: ClipboardData): String {})
-	@:overload(function(dataList: Array<ClipboardData>): String {})
-	function get(type: ClipboardDataType = Text, raw: Bool = false): String;
+	overload function get(data: ClipboardData): String;
+	overload function get(dataList: Array<ClipboardData>): String;
+	overload function get(type: ClipboardDataType = Text, raw: Bool = false): String;
 
 	/** Returns the list of available types of data in clipboard. **/
 	function readAvailableTypes(): Array<ClipboardDataType>;
 
 	/** Writes the specified `data` to the clipboard. **/
-	@:overload(function(data: ClipboardData): Void {})
-	@:overload(function(dataList: Array<ClipboardData>): Void {})
-	function set(data: String, type: ClipboardDataType = Text, raw: Bool = false): Void;
+	overload function set(data: ClipboardData): Void;
+	overload function set(dataList: Array<ClipboardData>): Void;
+	overload function set(data: String, type: ClipboardDataType = Text, raw: Bool = false): Void;
 }
 
 /** Defines the options of clipboard data. **/

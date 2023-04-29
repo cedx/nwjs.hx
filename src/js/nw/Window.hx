@@ -110,8 +110,8 @@ extern class Window extends EventEmitter<Window> {
 	static function getAll(callback: Array<Window> -> Void): Void;
 
 	/** Open a new window and loads the specified URL in it. **/
-	@:overload(function(url: String, options: WindowOpenOptions, ?callback: Window -> Void): Void {})
-	static function open(url: String, ?callback: Window -> Void): Void;
+	overload static function open(url: String, ?callback: Window -> Void): Void;
+	overload static function open(url: String, options: WindowOpenOptions, ?callback: Window -> Void): Void;
 
 	/** Moves the focus away. **/
 	function blur(): Void;
@@ -123,8 +123,8 @@ extern class Window extends EventEmitter<Window> {
 	function capturePage(callback: EitherType<Buffer, String> -> Void, ?options: EitherType<CapturePageOptions, String>): Void;
 
 	/** Captures a portion of this window. **/
-	@:overload(function(options: CaptureScreenshotOptions, callback: (Null<Error>, String) -> Void): Void {})
-	function captureScreenshot(options: CaptureScreenshotOptions): Promise<String>;
+	overload function captureScreenshot(options: CaptureScreenshotOptions): Promise<String>;
+	overload function captureScreenshot(options: CaptureScreenshotOptions, callback: (Null<Error>, String) -> Void): Promise<String>;
 
 	/** Closes this window. **/
 	function close(?force: Bool): Void;
@@ -245,8 +245,8 @@ extern class Window extends EventEmitter<Window> {
 	function show(?isShown: Bool): Void;
 
 	/** Opens the development tools to inspect this window. **/
-	@:overload(function(iframe: EitherType<IFrameElement, String>, ?callback: Window -> Void): Void {})
-	function showDevTools(?callback: Window -> Void): Void;
+	overload function showDevTools(?callback: Window -> Void): Void;
+	overload function showDevTools(iframe: EitherType<IFrameElement, String>, ?callback: Window -> Void): Void;
 
 	/** Toggles the fullscreen mode. **/
 	function toggleFullscreen(): Void;
