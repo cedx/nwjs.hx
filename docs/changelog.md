@@ -1,7 +1,8 @@
 # Changelog
 
-## Version [1.3.1](https://github.com/cedx/nwjs.hx/compare/v1.3.0...v1.3.1)
+## Version [1.4.0](https://github.com/cedx/nwjs.hx/compare/v1.3.0...v1.4.0)
 - Marked the deprecated methods with `@:deprecated` metadata.
+- Replaced `@:overload` metadata by the `overload` keyword.
 
 ## Version [1.3.0](https://github.com/cedx/nwjs.hx/compare/v1.2.2...v1.3.0)
 - Added the `App.setCrashDumpDir()` method.
