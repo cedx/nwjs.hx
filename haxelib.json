@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Marked the deprecated methods with `@:deprecated` metadata.",
+	"releasenote": "Marked the deprecated methods with `@:deprecated` metadata, replaced `@:overload` metadata by the `overload` keyword.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://docs.belin.io/nwjs.hx",
 	"version": "1.3.1"
