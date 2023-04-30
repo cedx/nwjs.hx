@@ -5,7 +5,7 @@ import sys.io.File;
 
 /** Builds the documentation. **/
 function main() {
-	if (FileSystem.exists("docs")) Tools.removeDirectory("docs");
+	if (FileSystem.exists("docs/api")) Tools.removeDirectory("docs/api");
 
 	Sys.command("haxe --define doc-gen --no-output --xml var/api.xml build.hxml");
 	Sys.command("lix", ["run", "dox",
@@ -13,14 +13,14 @@ function main() {
 		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
 		"--define", "themeColor", "0xea8220",
 		"--define", "version", Version.packageVersion,
-		"--define", "website", "https://github.com/cedx/nwjs.hx",
+		"--define", "website", "https://docs.belin.io/nwjs.hx",
 		"--include", "js\\.Nw",
 		"--include", "js\\.nw\\.*",
 		"--input-path", "var",
-		"--output-path", "docs",
+		"--output-path", "docs/api",
 		"--title", "Haxe Externs for NW.js",
 		"--toplevel-package", "js"
 	]);
 
-	File.copy("www/favicon.ico", "docs/favicon.ico");
+	File.copy("docs/favicon.ico", "docs/api/favicon.ico");
 }
