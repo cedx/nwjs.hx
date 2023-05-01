@@ -20,7 +20,7 @@ function main() {
     newWindow.on(Focus, () -> trace('New window is focused'));
   });
 
-  // Read/write data to the clipboard.
+  // Read/write data from/to the clipboard.
   final clipboard = Clipboard.get();
   clipboard.set("I love NW.js :)", Text);
   trace(clipboard.get(Text));
