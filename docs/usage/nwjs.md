@@ -37,7 +37,7 @@ function main() {
 ```
 
 API documentation for the `nwjs` externs is available at the following address:  
-[https://docs.belin.io/nwjs.hx/api](https://docs.belin.io/nwjs.hx/api)
+[https://docs.belin.io/nwjs.hx/api](api/)
 
 > For more information about the NW.js APIs, see [References](https://docs.nwjs.io/en/latest/References/App) in the [NW.js documentation](https://docs.nwjs.io).
 
