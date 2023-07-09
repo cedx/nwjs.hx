@@ -1,5 +1,5 @@
 //! --class-path src
-import nwjs.Version;
+import nwjs.Platform;
 import sys.FileSystem;
 import sys.io.File;
 using Lambda;
@@ -14,7 +14,7 @@ function main() {
 		"--define", "description", "Type definitions for using NW.js with Haxe.",
 		"--define", "source-path", "https://github.com/cedx/nwjs.hx/blob/main/src",
 		"--define", "themeColor", "0xea8220",
-		"--define", "version", Version.packageVersion,
+		"--define", "version", Platform.packageVersion,
 		"--define", "website", "https://docs.belin.io/nwjs.hx",
 		"--include", "js\\.Nw",
 		"--include", "js\\.nw\\.*",
