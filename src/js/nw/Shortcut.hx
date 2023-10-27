@@ -21,7 +21,7 @@ extern class Shortcut extends EventEmitter<Shortcut> {
 }
 
 /** Defines the events of a `Shortcut` instance. **/
-enum abstract ShortcutEvent<T: Function>(Event<T>) to Event<T> {
+enum abstract ShortcutEvent<Type: Function>(Event<Type>) to Event<Type> {
 
 	/** The `active` event. **/
 	var Active: ShortcutEvent<Void -> Void> = "active";

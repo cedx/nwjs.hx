@@ -49,7 +49,7 @@ extern class MenuItem extends EventEmitter<MenuItem> {
 }
 
 /** Defines the events of a `MenuItem` instance. **/
-enum abstract MenuItemEvent<T: Function>(Event<T>) to Event<T> {
+enum abstract MenuItemEvent<Type: Function>(Event<Type>) to Event<Type> {
 
 	/** The `click` event. **/
 	var Click: MenuItemEvent<Void -> Void> = "click";

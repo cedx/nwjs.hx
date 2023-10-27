@@ -260,7 +260,7 @@ extern class Window extends EventEmitter<Window> {
 }
 
 /** Defines the events of a `Window` instance. **/
-enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
+enum abstract WindowEvent<Type: Function>(Event<Type>) to Event<Type> {
 
 	/** The `blur` event. **/
 	var Blur: WindowEvent<Void -> Void> = "blur";

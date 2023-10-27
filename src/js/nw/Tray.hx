@@ -33,7 +33,7 @@ extern class Tray extends EventEmitter<Tray> {
 }
 
 /** Defines the events of a `Tray` instance. **/
-enum abstract TrayEvent<T: Function>(Event<T>) to Event<T> {
+enum abstract TrayEvent<Type: Function>(Event<Type>) to Event<Type> {
 
 	/** The `click` event. **/
 	var Click: TrayEvent<Void -> Void> = "click";

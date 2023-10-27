@@ -27,7 +27,7 @@ extern class App {
 	static final startPath: String;
 
 	/** Adds a `listener` that will be invoked when the specified `event` is triggered. **/
-	static function addListener<T: Function>(event: AppEvent<T>, listener: T): App;
+	static function addListener<Type: Function>(event: AppEvent<Type>, listener: Type): App;
 
 	/** Adds an entry to the whitelist used for controlling cross-origin access. **/
 	static function addOriginAccessWhitelistEntry(
@@ -59,13 +59,13 @@ extern class App {
 	static function getProxyForURL(url: String): Void;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function off<T: Function>(event: AppEvent<T>, listener: T): App;
+	static function off<Type: Function>(event: AppEvent<Type>, listener: Type): App;
 
 	/** Adds a `listener` that will be invoked when the specified `event` is triggered. **/
-	static function on<T: Function>(event: AppEvent<T>, listener: T): App;
+	static function on<Type: Function>(event: AppEvent<Type>, listener: Type): App;
 
 	/** Adds a one-time `listener` that will be removed and then invoked whenever the next time `event` is triggered. **/
-	static function once<T: Function>(event: AppEvent<T>, listener: T): App;
+	static function once<Type: Function>(event: AppEvent<Type>, listener: Type): App;
 
 	/** Terminates the application. **/
 	static function quit(): Void;
@@ -74,7 +74,7 @@ extern class App {
 	static function registerGlobalHotKey(shortcut: Shortcut): Void;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function removeListener<T: Function>(event: AppEvent<T>, listener: T): App;
+	static function removeListener<Type: Function>(event: AppEvent<Type>, listener: Type): App;
 
 	/** Removes an entry from the whitelist used for controlling cross-origin access. **/
 	static function removeOriginAccessWhitelistEntry(
@@ -106,7 +106,7 @@ enum abstract AppComponent(String) to String {
 }
 
 /** Defines the events of an `App` instance. **/
-enum abstract AppEvent<T: Function>(Event<T>) to Event<T> {
+enum abstract AppEvent<Type: Function>(Event<Type>) to Event<Type> {
 
 	/** The `open` event. **/
 	var Open: AppEvent<String -> Void> = "open";
