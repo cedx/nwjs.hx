@@ -22,7 +22,7 @@ extern class DesktopCaptureMonitor extends EventEmitter<DesktopCaptureMonitor> {
 }
 
 /** Defines the events of a `DesktopCaptureMonitor` instance. **/
-enum abstract DesktopCaptureMonitorEvent<Type: Function>(Event<Type>) to Event<Type> {
+enum abstract DesktopCaptureMonitorEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `added` event. **/
 	var Added: DesktopCaptureMonitorEvent<(String, String, Int, String, ?Bool) -> Void> = "added";
@@ -64,22 +64,22 @@ extern class Screen {
 	static function Init(): Void;
 
 	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
-	static function addListener<Type: Function>(event: ScreenEvent<Type>, listener: Type): Screen;
+	static function addListener<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Shows the desktop media picker UI with the specified set of `sources`. **/
 	static function chooseDesktopMedia(sources: Array<DesktopMediaSource>, callback: EitherType<Bool, String> -> Void): Void;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function off<Type: Function>(event: ScreenEvent<Type>, listener: Type): Screen;
+	static function off<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Adds a `listener` that will be invoked whenever the specified `event` is triggered. **/
-	static function on<Type: Function>(event: ScreenEvent<Type>, listener: Type): Screen;
+	static function on<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Adds a one-time `listener` that will be removed and then invoked whenever the next time `event` is triggered. **/
-	static function once<Type: Function>(event: ScreenEvent<Type>, listener: Type): Screen;
+	static function once<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 
 	/** Removes the specified `listener` for the given `event`. **/
-	static function removeListener<Type: Function>(event: ScreenEvent<Type>, listener: Type): Screen;
+	static function removeListener<T: Function>(event: ScreenEvent<T>, listener: T): Screen;
 }
 
 /** Defines the structure of a screen. **/
@@ -108,7 +108,7 @@ typedef ScreenDefinition = {
 }
 
 /** Defines the events of a `Screen` instance. **/
-enum abstract ScreenEvent<Type: Function>(Event<Type>) to Event<Type> {
+enum abstract ScreenEvent<T: Function>(Event<T>) to Event<T> {
 
 	/** The `displayAdded` event. **/
 	var DisplayAdded: ScreenEvent<ScreenDefinition -> Void> = "displayAdded";
