@@ -11,8 +11,8 @@ extern class Clipboard {
 	function clear(): Void;
 
 	/** Gets the data from the clipboard. **/
-	overload function get(data: ClipboardData): String;
-	overload function get(dataList: Array<ClipboardData>): String;
+	overload function get(data: ClipboardOptions): String;
+	overload function get(dataList: Array<ClipboardOptions>): Array<ClipboardData>;
 	overload function get(type: ClipboardDataType = Text, raw: Bool = false): String;
 
 	/** Returns the list of available types of data in clipboard. **/
@@ -24,7 +24,7 @@ extern class Clipboard {
 	overload function set(data: String, type: ClipboardDataType = Text, raw: Bool = false): Void;
 }
 
-/** Defines the options of clipboard data. **/
+/** Represents data from the clipboard. **/
 typedef ClipboardData = {
 
 	/** The clipboard data. **/
@@ -34,11 +34,11 @@ typedef ClipboardData = {
 	var ?raw: Bool;
 
 	/** The type of clipboard data.  **/
-	var ?type: ClipboardDataType;
+	var type: ClipboardDataType;
 }
 
 /** Defines the type of clipboard data. **/
-enum abstract ClipboardDataType(String) to String {
+enum abstract ClipboardDataType(String) from String to String {
 
 	/** The clipboard data is an HTML string. **/
 	var Html = "html";
@@ -54,4 +54,14 @@ enum abstract ClipboardDataType(String) to String {
 
 	/** The clipboard data is plain text. **/
 	var Text = "text";
+}
+
+/** Defines the options of the `Clipboard.get()` method. **/
+typedef ClipboardOptions = {
+
+	/** Value indicating whether to require raw image data. **/
+	var ?raw: Bool;
+
+	/** The type of clipboard data.  **/
+	var type: ClipboardDataType;
 }

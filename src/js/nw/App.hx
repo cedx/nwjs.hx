@@ -99,7 +99,7 @@ extern class App {
 }
 
 /** Defines the components of an `App` instance. **/
-enum abstract AppComponent(String) to String {
+enum abstract AppComponent(String) from String to String {
 
 	/** The Widevine component. **/
 	var Widevine = "WIDEVINE";

@@ -6,7 +6,7 @@ using StringTools;
 /** Reads and writes data to the clipboard. **/
 function main() {
 	final clipboard = Clipboard.get();
-	clipboard.set("I love NW.js :)", Text);
+	clipboard.set("I love NW.js :)");
 	trace(clipboard.get(Text));
 
 	final imagePath = Path.resolve("nw.png");

@@ -87,7 +87,7 @@ extern class Cookies {
 }
 
 /** Defines the underlying reason behind a cookie change. **/
-enum abstract OnChangedCause(String) to String {
+enum abstract OnChangedCause(String) from String to String {
 
 	/** The cookie was automatically removed due to garbage collection. **/
 	var Evicted = "evicted";
@@ -106,7 +106,7 @@ enum abstract OnChangedCause(String) to String {
 }
 
 /** Defines the state of a cookie's `SameSite` attribute. **/
-enum abstract SameSiteStatus(String) to String {
+enum abstract SameSiteStatus(String) from String to String {
 
 	/** The cookie is set with `SameSite=Lax`. **/
 	var Lax = "lax";

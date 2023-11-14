@@ -17,7 +17,7 @@ typedef PrintCustomMargins = {
 }
 
 /** Defines the type of print margins. **/
-enum abstract PrintMarginsType(Int) to Int {
+enum abstract PrintMarginsType(Int) from Int to Int {
 
 	/** Use the default margins. **/
 	var Default;
