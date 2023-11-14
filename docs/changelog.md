@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.4.1](https://github.com/cedx/nwjs.hx/compare/v1.4.0...v1.4.1)
+- Fixed the typings of the `Clipboard` class.
+
 ## Version [1.4.0](https://github.com/cedx/nwjs.hx/compare/v1.3.0...v1.4.0)
 - Marked the deprecated methods with `@:deprecated` metadata.
 - Replaced `@:overload` metadata by the `overload` keyword.
