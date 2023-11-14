@@ -7,6 +7,6 @@
 	"name": "nwjs",
 	"releasenote": "Marked the deprecated methods with `@:deprecated` metadata, replaced `@:overload` metadata by the `overload` keyword.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
-	"url": "https://cedx.github.io/nwjs.hx",
+	"url": "https://github.com/cedx/nwjs.hx",
 	"version": "1.4.0"
 }

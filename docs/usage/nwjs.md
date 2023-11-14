@@ -56,9 +56,9 @@ import js.Browser;
 // Opens a given URL in the browser.
 function main() {
   #if nwjs
-    Shell.openExternal("https://cedx.github.io/nwjs.hx");
+    Shell.openExternal("https://github.com/cedx/nwjs.hx");
   #else
-    Browser.window.open("https://cedx.github.io/nwjs.hx", "_blank");
+    Browser.window.open("https://github.com/cedx/nwjs.hx", "_blank");
   #end
 }
 ```
