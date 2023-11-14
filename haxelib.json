@@ -5,8 +5,8 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Marked the deprecated methods with `@:deprecated` metadata, replaced `@:overload` metadata by the `overload` keyword.",
+	"releasenote": "Fixed the typings of the `Clipboard` class.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://github.com/cedx/nwjs.hx",
-	"version": "1.4.0"
+	"version": "1.4.1"
 }
