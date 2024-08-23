@@ -25,11 +25,14 @@ import sys.io.File;
 		}
 
 	/** Gets the name of the Haxe compilation target. **/
-	macro static function getHaxeTarget() return macro $v{Context.definedValue("target.name")};
+	macro static function getHaxeTarget()
+		return macro $v{Context.definedValue("target.name")};
 
 	/** Gets the version number of the Haxe compiler. **/
-	macro static function getHaxeVersion() return macro $v{Context.definedValue("haxe")};
+	macro static function getHaxeVersion()
+		return macro $v{Context.definedValue("haxe")};
 
 	/** Gets the package version of this program. **/
-	macro static function getPackageVersion() return macro $v{Json.parse(File.getContent("haxelib.json")).version};
+	macro static function getPackageVersion()
+		return macro $v{Json.parse(File.getContent("haxelib.json")).version};
 }
