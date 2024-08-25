@@ -7,7 +7,7 @@ import sys.io.File;
 #end
 
 /** Information about the environment in which the current program is running. **/
-@:noDoc abstract class Platform {
+abstract class Platform {
 
 	/** The name of the Haxe compilation target. **/
 	public static var haxeTarget(get, never): String;
