@@ -1,5 +1,8 @@
 # Changelog
 
+## Version [1.4.2](https://github.com/cedx/nwjs.hx/compare/v1.4.1...v1.4.2)
+- Migrated the documentation to the [GitHub wiki](https://github.com/cedx/nwjs.hx/wiki).
+
 ## Version [1.4.1](https://github.com/cedx/nwjs.hx/compare/v1.4.0...v1.4.1)
 - Fixed the typings of the `Clipboard` class.
 

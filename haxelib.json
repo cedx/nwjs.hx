@@ -5,7 +5,7 @@
 	"description": "Extern definitions for NW.js.",
 	"license": "MIT",
 	"name": "nwjs",
-	"releasenote": "Fixed the typings of the `Clipboard` class.",
+	"releasenote": "Migrated the documentation to the GitHub wiki.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://github.com/cedx/nwjs.hx",
 	"version": "1.4.2"
