@@ -8,5 +8,5 @@
 	"releasenote": "Fixed the typings of the `Clipboard` class.",
 	"tags": ["desktop", "extern", "js", "nodejs", "nwjs", "web"],
 	"url": "https://github.com/cedx/nwjs.hx",
-	"version": "1.4.1"
+	"version": "1.4.2"
 }
