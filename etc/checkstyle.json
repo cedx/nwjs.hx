@@ -53,7 +53,7 @@
 		{"type": "RedundantAccessMeta"},
 		{"type": "RedundantAllowMeta"},
 		{"type": "RedundantModifier"},
-		{"type": "ReturnCount", "props": {"max": 3}},
+		{"type": "ReturnCount", "props": {"max": 4}},
 		{"type": "SeparatorWhitespace"},
 		{"type": "SeparatorWrap"},
 		{"type": "SimplifyBooleanExpression"},
