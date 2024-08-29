@@ -36,7 +36,7 @@
 		{"type": "MemberName", "props": {"format": "^[a-z][a-zA-Z0-9]*$", "tokens": ["CLASS", "TYPEDEF"]}},
 		{"type": "MemberName", "props": {"format": "^[A-Z][a-zA-Z0-9]*$", "tokens": ["ENUM"]}},
 		{"type": "MethodCount"},
-		{"type": "MethodLength"},
+		{"type": "MethodLength", "props": {"max": 100}},
 		{"type": "MethodName"},
 		{"type": "ModifierOrder"},
 		{"type": "MultipleVariableDeclarations"},
