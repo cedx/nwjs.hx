@@ -8,11 +8,13 @@ extern class Nw {
 
 	/** The build flavor of NW.js. **/
 	static var flavor(get, never): NwFlavor;
-		static inline function get_flavor(): NwFlavor return process.versions["nw-flavor"];
+		static inline function get_flavor(): NwFlavor
+			return process.versions["nw-flavor"];
 
 	/** The version number of NW.js. **/
 	static var version(get, never): String;
-		static inline function get_version(): String return process.versions["nw"];
+		static inline function get_version(): String
+			return process.versions["nw"];
 }
 
 /** Defines the NW.js build flavors. **/
