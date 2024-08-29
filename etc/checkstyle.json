@@ -2,7 +2,7 @@
 	"defaultSeverity": "ERROR",
 	"exclude": {
 		"path": "RELATIVE_TO_PROJECT",
-		"Dynamic": ["src/js/nw/App"],
+		"Dynamic": ["src/js/nw/App:manifest"],
 		"HiddenField": ["src/js/nw/Window"],
 		"MemberName": ["src/js/nw/Printer", "src/js/nw/Screen", "src/js/nw/Window"]
 	},
@@ -40,7 +40,7 @@
 		{"type": "MethodName"},
 		{"type": "ModifierOrder"},
 		{"type": "MultipleVariableDeclarations"},
-		{"type": "NestedControlFlow"},
+		{"type": "NestedControlFlow", "props": {"max": 4}},
 		{"type": "NestedForDepth"},
 		{"type": "NestedIfDepth"},
 		{"type": "NestedTryDepth"},
