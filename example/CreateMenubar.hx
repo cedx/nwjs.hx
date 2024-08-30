@@ -1,4 +1,3 @@
-import js.Node;
 import js.nw.Menu;
 import js.nw.MenuItem;
 import js.nw.Window;
@@ -10,7 +9,7 @@ function main() {
 	submenu.append(new MenuItem({label: "Item B"}));
 
 	final menubar = Menu.newMenubar();
-	if (Node.process.platform == "darwin") menubar.createMacBuiltin("My App");
+	if (Sys.systemName() == "Mac") menubar.createMacBuiltin("My App");
 	menubar.append(new MenuItem({
 		label: "First Menu",
 		submenu: submenu
