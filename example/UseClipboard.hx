@@ -1,6 +1,7 @@
-import js.node.Fs;
-import js.node.Path;
+import haxe.crypto.Base64;
 import js.nw.Clipboard;
+import sys.FileSystem;
+import sys.io.File;
 using StringTools;
 
 /** Reads and writes data to the clipboard. **/
@@ -9,10 +10,10 @@ function main() {
 	clipboard.set("I love NW.js :)");
 	trace(clipboard.get(Text));
 
-	final imagePath = Path.resolve("nw.png");
-	final imageData = Fs.readFileSync(imagePath).toString("base64");
+	final imagePath = FileSystem.absolutePath("nw.png");
+	final imageData = Base64.encode(File.getBytes(imagePath));
 	final clipboardData: Array<ClipboardData> = [
-		{type: Html, data: '<img src="file://${imagePath.urlEncode()}"/>'},
+		{type: Html, data: '<img src="file://${imagePath.urlEncode()}">'},
 		{type: Png, data: imageData, raw: true}
 	];
 
