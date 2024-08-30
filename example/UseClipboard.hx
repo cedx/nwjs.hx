@@ -13,7 +13,7 @@ function main() {
 	final imagePath = FileSystem.absolutePath("nw.png");
 	final imageData = Base64.encode(File.getBytes(imagePath));
 	final clipboardData: Array<ClipboardData> = [
-		{type: Html, data: '<img src="file://${imagePath.urlEncode()}">'},
+		{type: Html, data: '<img src="data:image/png;base64,$imageData">'},
 		{type: Png, data: imageData, raw: true}
 	];
 
