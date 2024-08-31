@@ -235,7 +235,7 @@ extern class Window extends EventEmitter<Window> {
 	function setShowInTaskbar(isShown: Bool): Void;
 
 	/** Turns on/off the transparency support. **/
-	@:deprecated("This feature is deprecated since 0.13.0.")
+	@:deprecated("This feature is deprecated since version 0.13.0.")
 	function setTransparent(transparent: Bool): Void;
 
 	/** Controls whether this window is visible on all workspaces simultaneously. **/
@@ -255,7 +255,7 @@ extern class Window extends EventEmitter<Window> {
 	function toggleKioskMode(): Void;
 
 	/** Unmaximizes this window. **/
-	@:deprecated("This feature is deprecated since 0.13.0.")
+	@:deprecated("This feature is deprecated since version 0.13.0.")
 	function unmaximize(): Void;
 }
 
@@ -266,7 +266,7 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 	var Blur: WindowEvent<Void -> Void> = "blur";
 
 	/** The `capturepagedone` event. **/
-	@:deprecated("This feature is deprecated since 0.13.0.")
+	@:deprecated("This feature is deprecated since version 0.13.0.")
 	var CapturePageDone: WindowEvent<Void -> Void> = "capturepagedone";
 
 	/** The `close` event. **/
@@ -279,7 +279,7 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 	var DevToolsClosed: WindowEvent<Void -> Void> = "devtools-closed";
 
 	/** The `devtools-opened` event. **/
-	@:deprecated("This feature is deprecated since 0.13.0.")
+	@:deprecated("This feature is deprecated since version 0.13.0.")
 	var DevToolsOpened: WindowEvent<String -> Void> = "devtools-opened";
 
 	/** The `document-end` event. **/
@@ -295,7 +295,7 @@ enum abstract WindowEvent<T: Function>(Event<T>) to Event<T> {
 	var Focus: WindowEvent<Void -> Void> = "focus";
 
 	/** The `leave-fullscreen` event. **/
-	@:deprecated("This feature is deprecated since 0.13.0.")
+	@:deprecated("This feature is deprecated since version 0.13.0.")
 	var LeaveFullscreen: WindowEvent<Void -> Void> = "leave-fullscreen";
 
 	/** The `loaded` event. **/

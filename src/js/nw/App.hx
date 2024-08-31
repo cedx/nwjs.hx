@@ -85,7 +85,7 @@ extern class App {
 	): Void;
 
 	/** Set the directory where the minidump file will be saved on crash. **/
-	@:deprecated("This feature is deprecated since 0.11.0.")
+	@:deprecated("This feature is deprecated since version 0.11.0.")
 	static function setCrashDumpDir(directory: String): Void;
 
 	/** Sets the proxy configuration which the web engine will use to request network resources. **/
